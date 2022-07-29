@@ -2,6 +2,11 @@
 In this repository you can find the releases (you will be able to find the basic sources somewhere else) for the women &amp; men digital publication made by [Eurostat](http://ec.europa.eu/eurostat).
 
 This digital publication is hosted in Eurostat (latest version available under [Current Release](https://ec.europa.eu/eurostat/cache/infographs/womenmen/), but can also be fully translated and hosted by an NSI for example.
+## Previous editions
+Previous editions which were actually translated can be found here:
+
+[2021 Edition](https://ec.europa.eu/eurostat/de/web/products-interactive-publications/product/-/asset_publisher/TrNFsyxI58VZ/content/ks-04-20-395?_com_liferay_asset_publisher_web_portlet_AssetPublisherPortlet_INSTANCE_TrNFsyxI58VZ_assetEntryId=11157158&_com_liferay_asset_publisher_web_portlet_AssetPublisherPortlet_INSTANCE_TrNFsyxI58VZ)
+
 
 ## Development
 The file structure of publication:
@@ -33,19 +38,26 @@ The main navigation part is located under **womenmen**, which is also the home f
 
 The __vis__ folder contains all the visualisation tools, currently those are:
 ```
-basebubblechart: Women per 100 men
-cod : Causes of death
-education:Education levels
-employmentpattern: Employment rate by number of children
-habits: Cultural habits and social relations
-household: Household types
-internetactivities: Internet activities
-internetpurchase: Internet purchases
-lifeline: Lifeline of men and women in the EU
-monthlywages: Monthly wages by profession
-nutrition: Nutrition habits
-selfperceived: Selfperceived health
-quiz: publication quiz
+00_00_00: Quiz
+01_01_01: Lifeline 
+01_02_01: Women per 100 men
+01_02_02: Household types
+01_03_01: Self-perceived health
+01_03_02: Causes of death (currently disabled)
+01_04_01: Overall life satisfaction
+02_01_01: Education levels
+02_02_01: Employment rate
+02_02_02: Part-time workers
+02_02_03: Unemployment
+02_03_01: Managers
+02_04_01: Gender pay gap
+02_04_02: Mean hourly wages
+03_01_01: nutrition habits and sports practice
+03_02_01: Cultural habits and social relations (currently not shown)
+03_03_01: Internet activities
+03_03_02: online shopping
+03_04_01: daily childcare
+03_04_02: daily cooking
 ```
 
 The "svg" folder contains all visualisation tools, based on "pure SVG image". Currently those are:
