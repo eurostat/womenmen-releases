@@ -113,20 +113,7 @@ Open the file: "localisation.js" in the corresponding "l10n" of lifeline visuali
 The content of this file looks like this:
 
 Content of localisations.js
-1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
+```js
 //set value 'en' to default language to be used in your environment
 window.defaultLanguage = 'en';
  
@@ -140,10 +127,8 @@ window.availableLanguages = {
 //set the initial selected country to display
 //only available countries in data should be chosen
 //country code in uppercase, i.e. DE, LU
-window.countrySelected = 'EU28';
-
-
-
+window.countrySelected = 'EU27_2020';
+```
 
 Add a new language to the application by modifying the block window.availableLanguages.
 
@@ -152,18 +137,14 @@ Be careful with the commas, all lines have a comma at the end, except for the la
 Properly formatted, it looks like this: 
 
 New language location
-4
-5
-6
-7
-8
-9
+```js
 window.availableLanguages = {
     'en': 'l10n/en.json',
     'de': 'l10n/de.json',
     'fr': 'l10n/fr.json',
     'es': 'l10n/es.json'
 };
+```
 Here we copy the file "en.json" to a file with the same name as the language code we've added under point (2), in our case we copy the file "en.json" to "es.json".
 
 
@@ -171,7 +152,7 @@ Next, we want to translate the content of the new "es.json" file.
 
 For the lifeline tool, the original json file looks like this:
 
-```
+```json
 Localisation block
 {
     "**** CONTENT ********": "*******DO NO TRANSLATE THIS LINE********",       
@@ -256,8 +237,6 @@ Localisation block
     "UK_footnote": "United Kingdom: data refer to 2013 for the marriage indicator"
 }
 ```
-
-
 You can open the file in an editor of your choice but we recommend to use this online editor http://www.jsoneditoronline.org/ 
 Using this editor is quite easy, simply copy/paste the content of the json file in the left pane (or open the file from disk) , then click on the right arrow and translate the English text in the panel on the right.
 After translation, click on the left arrow then save your file and the json file will be updated.
@@ -267,18 +246,9 @@ The relevant parts of the interface are marked with a red frame in the screensho
 The editor has also on on-line help button http://www.jsoneditoronline.org/doc/index.html
 
 When this file is loaded into the online editor it look like the screenshot below, simply translate the English text in the right hand pane. See highlighted selection as an example.
- 
 
-
-
-
-
-IMPORTANT: If you choose to use notepad, please make sure, that the file will be saved in "UTF-8" format (if you use another editor, which is capable of saving the file in either 'UTF-8 without BOM' or 'UTF-8 with BOM', please choose 'UTF-8 without BOM'!), otherwise special character will be broken when the publication is opened in a Browser. The original "en.json" file, which we have copied is already in this correct format!
+**IMPORTANT**: If you choose to use notepad, please make sure, that the file will be saved in "UTF-8" format (if you use another editor, which is capable of saving the file in either 'UTF-8 without BOM' or 'UTF-8 with BOM', please choose 'UTF-8 without BOM'!), otherwise special character will be broken when the publication is opened in a Browser. The original "en.json" file, which we have copied is already in this correct format!
 For example in "Notepad.exe" the "Save"-dialog should look like this: (click on image to enlarge)
-
-
-
-
 
 Now the "l10n" folder for the lifeline visualisation should look like this:
 ```
@@ -299,5 +269,92 @@ Once the default language has been changed, double click the "index.html" file a
 
 You can also force any configured language to be shown by adding a parameter to the URL. But this will only work if the files are served by a web server and not if you open the index.html directly with a browser from your desktop.
 
-To force the spanish language from a webserver simply add the lang parameter to the URL as follows:
-htttp://\<domain\>/index.html?lang=es" 
+### Specialty for quiz
+
+The quiz has some structural differences compared to the visualisations. It has a dot-separated structure for the keys.
+
+Example:
+
+```json
+"questions.1_1.question": "At what age do young women and men leave their parental home?",
+"questions.1_1.choices.0": "Women at the age of 25, men at the age of 27",
+"questions.1_1.choices.1":"Men at the age of 20, women at the age of 22",
+"questions.1_1.choices.2":"Both at the age of 21",
+...
+}
+```
+
+In order to translate a question, you would have to translate the question and each choice. The choices are in the specified order. Please keep the order!
+
+## Generating a full new quiz
+
+On this page, we explain step by step how you can create custom questions and answers in the Women & Men Quiz.
+
+For this, you need the newest package of the women & Men release (2018) - v2. This is only possible in the newest release due to some technical changes that were only performed for this release.
+
+To customize the quiz questions and answers you have to go through two steps:
+
+You have to configure some parameters for each question (see A below)
+You have to add or translate the text for the questions and the proposed answers (see B below)
+### Configure the questions
+
+The configuration only defines the question code, the position of the correct answer in the list of proposed choices, the icon, an information link and the number of choices for this question.
+The real text for the question and proposed answers is stored in the translation file (see B below)
+
+Locate the questions configuration file. The file is residing here: "./config/questions.js". 
+In this file, you have the following structure:
+```js
+window.questions = [{
+        "question-key": "questions.1_1",
+        "correct-answer-index": 0,
+        "icon": "milestones.svg",
+        "informationLink": "bloc-1a.html",
+        "choices": 3
+},
+{
+        "question-key": "questions.1_2",
+        "correct-answer-index": 1,
+        "icon": "household.svg",
+        "informationLink": "bloc-1b.html",
+        "choices": 2
+} ... ]
+```
+
+In this example, we only list two questions for the sake of brevity and clarity.
+
+Each question is one object in the array. If you want to add questions, make sure to create a new full object (one question) and separate each question object with a comma.
+
+> In the following table, you will find the properties with explanations
+
+| Property | Explanation | Possible Values|
+|----------| ----------- | ---------------|
+| question-key | *\[TEXT\]* This is the key of the question. This is used in the translation file ("./l10n/\[language_code\].json") to identify the question and give the translation for the question itself and the answers. You need to make sure to keep the structure: questions.*\[section_code\]*. You can have more or less questions per section, and you can even have a different number of sections.|	questions.1_1 |
+| correct-answer-index | *\[NUMBER]* This indicates, which is the correct answer for the given question. Please note, that this is a zero-based number. If the first answer is the correct one, this would have to be "0". |	0, 2 etc. |
+|icon	| [TEXT] This is the icon to be used for the question. Can be any image in the image folder. If needed, you can even add images there. |	milestones.svg |
+|informationLink | [TEXT] This is the link, where you can read more information. It is only possible to link to a page within the publication itself. Just give the name of the html page you want to link to.	|bloc-2a.html|
+|choices	| [NUMBER] This indicates the total number of choices for this question. |	3 |
+
+<br/>
+You can add / remove / edit any number of question in the array window.questions. It is just important to know, that the order of questions will be the same order as in the array. It does not use the section or index to order the questions. If you want to squeeze a question in between, simply put the object between two existing question objects.|
+
+### Translate question and answers
+You need to locate the translation file for your language. ("./l10n/[language].json) - for example "./l10n/en.json" for the english translation and add or remove what is needed:
+
+add a line for your new question with the key "blocks.[section_code].title"="Translation of the question header title here"
+add a line with the key "questions.[section_code].question"="Translation of your question here"
+add a line with the key "questions.[section_code].choices.[index].answer" = "Translation of choice here" 
+
+Example for the question configured as questions.1_1 and questions.1_2 from the code example above:
+```json
+[...]
+"blocks.1_1.title": "Important milestones in life",
+"questions.1_1.question": "At what age do young women and men leave their parental home?",
+"questions.1_1.choices.0.answer": "Women at the age of 25, men at the age of 27",
+"questions.1_1.choices.1.answer":"Men at the age of 20, women at the age of 22",
+"questions.1_1.choices.2.answer":"Both at the age of 21",
+"blocks.1_2.title": "Living together",
+"questions.1_2.question": "In the EU, there are more young men aged up to 18 than women. This sentence is:",
+"questions.1_2.choices.0.answer": "Wrong",
+"questions.1_2.choices.1.answer": "Right",
+[...]
+```
