@@ -1,0 +1,63 @@
+{
+	"decimal_separator": ".",
+	
+	"title"					: "Daily childcare and education of children, 2016",
+	"subtitle1"				: "How are women and men involved?",
+	"subtitle2"				: "(% of adults aged 25-49 taking care of and/or educating their children every day)",
+	
+	"footerLeft1"			: "Member States are ranked from the smallest difference",
+	"footerLeft2"			: "to the largest difference between women and men.",
+	"footerLeft4"			: "Source: Eurofound",	
+
+	
+	"Women"			: "Women", 
+	"Men"			: "Men", 
+	
+	"titleWomen"	: "Women", 
+	"titleMen"		: "Men", 
+	
+    "embed-icon": "Embed",
+	"embed_instruction": "Copy this code and paste it in your Website.",
+    "twitter-icon": "Twitter",
+    "facebook-icon": "Facebook",
+	"mail-icon": "Mail",
+    "embed": "Embed this chart",
+	"modalClose": "Close",
+	
+	
+	"EU27": "EU",
+	"AT": "AUSTRIA",
+	"BE": "BELGIUM",
+	"BG": "BULGARIA",
+	"CY": "CYPRUS",
+	"CZ": "CZECHIA",
+	"DE": "GERMANY",
+	"DK": "DENMARK",
+	"EE": "ESTONIA",
+	"EL": "GREECE",
+	"ES": "SPAIN",
+	"FI": "FINLAND",
+	"FR": "FRANCE",
+	"HR": "CROATIA",
+	"HU": "HUNGARY",
+	"IE": "IRELAND",
+	"IT": "ITALY",
+	"LT": "LITHUANIA",
+	"LU": "LUXEMBOURG",
+	"LV": "LATVIA",
+	"MT": "MALTA",
+	"NL": "NETHERLANDS",
+	"PL": "POLAND",
+	"PT": "PORTUGAL",
+	"RO": "ROMANIA",
+	"SE": "SWEDEN",
+	"SI": "SLOVENIA",
+	"SK": "SLOVAKIA",
+	"UK": "UNITED KINGDOM",
+	"IS": "ICELAND",
+	"NO": "NORWAY",
+	
+	"MC":  "MACEDONIA",	
+	"TK":  "TURKEY"
+	
+}

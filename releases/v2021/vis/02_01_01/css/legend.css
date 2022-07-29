@@ -1,0 +1,78 @@
+.icon_box-empty:before {
+	content: "\56";
+    font-size: 30px;
+    cursor:pointer;
+	font-family: ElegantIcons;
+}
+.icon_box-empty:hover:before {
+    opacity: 0.5
+}
+
+.icon_box-checked:before {
+    cursor:pointer;
+	content: "\5a";
+    font-size: 30px;
+	font-family: ElegantIcons;
+}
+.icon_box-checked:hover:before {
+    opacity: 0.5
+}
+
+.arrow_triangle-down:before {
+	content: "\43";
+}
+.small-icon {
+    font-size: 16px;    
+}
+.arrow_triangle-down:hover:before {
+    opacity: 0.5
+}
+
+.unuseable {
+    cursor: default;
+    color: grey;
+    font-size: 30px;
+}
+
+.useable {
+    cursor: pointer;
+    /*color: black;*/
+    font-size: 30px;
+}
+
+.legend div {
+    /*width: 33.333333%;*/
+    /*width: 180px;*/
+    display: inline-block;
+    text-align: center;
+    /*cursor: pointer;*/
+    /*color: black;*/
+    margin-right: 3px;
+    margin-left: 3px;
+    /*vertical-align: middle;*/
+}
+
+.legend-text {
+    font-size: 20px;
+}
+
+.legend-block {
+    padding-left: 20px;
+}
+
+.box_F {
+    width: 24px; 
+    height: 24px; 
+    background-color:#d7642d;
+}
+
+.box_M {
+    width: 24px; 
+    height: 24px; 
+    background-color: rgb(31,111,184);
+}
+    
+.placeholder {
+    width: 24px;
+    height: 24px;
+}

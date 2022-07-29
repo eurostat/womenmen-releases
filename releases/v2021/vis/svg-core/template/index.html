@@ -1,0 +1,55 @@
+<html>
+	
+	<head>
+	    <link rel="stylesheet" href="../svg-core/css/bootstrap-4.6.0.min.css" />
+	    <link rel="stylesheet" href="../svg-core/css/style.css" />
+    	<link rel="stylesheet" href="../svg-core/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+    	<link rel="stylesheet" href="../svg-core/css/social.css">
+ 
+	</head>
+
+	<body>
+		<div id="loader" class="loader">
+			<div class="row justify-content-center align-items-center">
+				<i class="fa fa-spin fa-spinner fa-3x fa-fw"></i>
+			</div>
+		</div>
+		<embed src="" width="95%" id="mainImage"></embed>
+		<div id="bookmark-container" class="col" style="display:none;">
+			<div class="col">
+			  <div class="d-flex justify-content-center">
+				<div id="bookmark-link" class="bookmark"><span>Source: Eurostat - </span><a target="_blank" rel="noopener" href="" class="infolink">access to dataset</a></div>
+			  </div>
+			</div>
+		  </div>
+		<div id="social-container" class="socialmedia"></div>
+	    <div id="container-modal-embed" class="modal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" style="display:none">
+	        <div class="modal-dialog modal-lg" role="document">
+	            <div class="modal-content">
+	                <div id="embed-header" class="modal-header">
+	                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+	                        <span aria-hidden="true">&times;</span>
+	                    </button>
+	                </div>
+	                <div id="embed" class="modal-body">
+	                </div>
+	                <div class="modal-footer">
+	                </div>
+	            </div>
+	        </div>
+	    </div>
+	</body>
+	<script src="l10n/localisations.js"></script>
+	<script src="data/mappingTexts.js"></script>
+	<script src="data/constants.js"></script>
+	<script src="config/mappingTextSize.js"></script>
+
+	<script src="../svg-core/js/jQuery-FontSpy.js"></script>
+    <script src="../svg-core/js/d3-4.13.0.min.js"></script>
+    <script src="../svg-core/js/bootstrap-4.6.0.bundle.min.js" type="text/javascript"></script>
+    <script src="../svg-core/js/l10n.js/l10n.js"></script>
+	<script src="../svg-core/js/lang.js"></script>
+	<script src="../svg-core/js/main.js"></script>
+	<script src="../svg-core/js/social.js" type="text/javascript"></script>
+
+</html>

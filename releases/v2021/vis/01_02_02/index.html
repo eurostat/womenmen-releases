@@ -1,0 +1,263 @@
+<!--[if IE]><!DOCTYPE html><!--><!--
+    /******************************************************************/
+  /* "household-types-chart" - v"1.0.1"    */
+  /* http://ec.europa.eu/eurostat https://ec.europa.eu/eurostat     */
+  /* Author: Sven Kuncikowski <sven.kuncikowski@sword-group.com>    */
+  /* "Licensed European Union Public Licence (EUPL v.1.1)"          */
+  /******************************************************************/
+  <![endif]--><!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Eurostat Digital Publication - Household types</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Eurostat: Household types" />
+    <meta
+      property="og:image"
+      content="https://ec.europa.eu/eurostat/cache/infographs/womenmen/images/bloc-1/bloc1b-householdTypes_en.png"
+    />
+  <link href="styles/npm.bootstrap.bbea35026cd65da05b12.css" rel="stylesheet"><link href="styles/npm.billboard.js.d829661065245aa96ba1.css" rel="stylesheet"><link href="styles/npm.open-sans-all.bec717621c24a348f1c4.css" rel="stylesheet"><link href="styles/main.781c92d56709ca7caeda.css" rel="stylesheet"></head>
+
+  <body>
+    <div id="loader" class="container">
+      <div class="row justify-content-center align-items-center">
+        <div class="fa-3x">
+          <i class="fas fa-spinner fa-spin"></i>
+        </div>
+      </div>
+    </div>
+
+    <div id="global" style="display: none;" class="container-fluid">
+      <div class="row">
+        <div class="col">
+          <h3>
+            <strong id="title">title</strong>
+          </h3>
+        </div>
+        <div class="col-3">
+          <div class="d-flex justify-content-end">
+            <div id="logo" class="logo"></div>
+          </div>
+        </div>
+      </div>
+      <div class="row" style="padding-bottom: 5px;">
+        <div class="col">
+          <div class="d-flex justify-content-start">
+            <span id="subtitle" class="subtitle">subtitle</span>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <div class="divider"></div>
+        </div>
+      </div>
+
+      <div class="row justify-content-around">
+        <div
+          id="card-0"
+          class="card text-center card-resp image-container active"
+        >
+          <div class="card-block">
+            <b>
+              <p
+                class="card-text image-text align-self-baseline"
+                id="shorttitle0"
+              >
+                shorttitle0
+              </p>
+            </b>
+          </div>
+        </div>
+        <div id="card-1" class="card text-center card-resp image-container">
+          <div class="card-block">
+            <b>
+              <p
+                class="card-text image-text align-self-baseline"
+                id="shorttitle1"
+              >
+                shorttitle1
+              </p>
+            </b>
+          </div>
+        </div>
+        <div id="card-2" class="card text-center card-resp image-container">
+          <div class="card-block">
+            <b>
+              <p
+                class="card-text image-text align-self-baseline"
+                id="shorttitle2"
+              >
+                shorttitle2
+              </p>
+            </b>
+          </div>
+        </div>
+        <div id="card-3" class="card text-center card-resp image-container">
+          <div class="card-block">
+            <b>
+              <p
+                class="card-text image-text align-self-baseline"
+                id="shorttitle3"
+              >
+                shorttitle3
+              </p>
+            </b>
+          </div>
+        </div>
+        <div id="card-4" class="card text-center card-resp image-container">
+          <div class="card-block">
+            <b>
+              <p
+                class="card-text image-text align-self-baseline"
+                id="shorttitle4"
+              >
+                shorttitle4
+              </p>
+            </b>
+          </div>
+        </div>
+      </div>
+      <div class="row image-text-container">
+        <div class="d-flex justify-content-center">
+          <strong class="image-text" id="shorttitle"></strong>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <div class="divider"></div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div id="graph-container" class="col">
+          <div id="barchart"></div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col footnote-container">
+          <div id="footnote" class="footnotes">footnote</div>
+        </div>
+      </div>
+      <div class="row align-items-end">
+        <div id="button-col" class="col">
+          <div id="axis-flex" class="d-flex justify-content-start">
+            <!-- <button id="btn-axis" class="btn btn-light btn-sm">scale</button> -->
+          </div>
+        </div>
+        <div id="legend-col" class="col-5 col-auto">
+          <div id="legend-flex" class="d-flex justify-content-center">
+            <div id="legend-container" class="legendcontainer"></div>
+          </div>
+        </div>
+        <div id="social-col" class="col col-3">
+          <div id="social-flex" class="d-flex justify-content-end">
+            <div id="social-container" class="socialmedia"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+          <div id="bookmark-flex" class="d-flex justify-content-center mx-auto">
+            <div id="bookmark-container" class="legendcontainer"></div>
+              <div id="bookmark-link" class="legendcontainer"></div>
+          </div>
+      </div>
+
+    </div>
+
+    <div
+      id="container-modal-instructions"
+      class="modal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="mySmallModalLabel"
+    >
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div id="instructions-header" class="modal-header">
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div id="instructions" class="modal-body"></div>
+          <div id="dummy-header" class="modal-header"></div>
+          <div id="informations-header" class="modal-header"></div>
+          <div id="informations" class="modal-body"></div>
+          <div class="modal-footer"></div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      id="container-modal-embed"
+      class="modal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="mySmallModalLabel"
+    >
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div id="embed-header" class="modal-header">
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div id="embed" class="modal-body"></div>
+          <div class="modal-footer"></div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      id="container-modal-dataset"
+      class="modal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="mySmallModalLabel"
+    >
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div id="dataset-header" class="modal-header">
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div id="dataset" class="modal-body"></div>
+          <div class="modal-footer"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- needed for localisation, otherwise it is not available -->
+    <script
+      type="text/javascript"
+      src="./l10n/localisations.js"
+      charset="utf-8"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./config/configuration.js"
+      charset="utf-8"
+    ></script>
+  <script type="text/javascript" src="scripts/runtime.0221e38c643703965899.js"></script><script type="text/javascript" src="scripts/npm.d3-shape-b1d2cf1276a13102ee87.js"></script><script type="text/javascript" src="scripts/npm.d3-selection-617d26a77e1bbc5f9f9b.js"></script><script type="text/javascript" src="scripts/npm.core-js-cf43598848a22ec7cf02.js"></script><script type="text/javascript" src="scripts/npm.d3-array-40c6af1f3b948d1c12da.js"></script><script type="text/javascript" src="scripts/npm.d3-transition-b4701c6a918a09f8423d.js"></script><script type="text/javascript" src="scripts/npm.d3-interpolate-d9bf6cf78016d56df4e7.js"></script><script type="text/javascript" src="scripts/npm.d3-scale-dceeff9059d9697603dd.js"></script><script type="text/javascript" src="scripts/npm.d3-time-87eb7664c24393789035.js"></script><script type="text/javascript" src="scripts/npm.d3-format-5be46ad24951325d1b05.js"></script><script type="text/javascript" src="scripts/npm.fortawesome-c755b04cdf31d0f44889.js"></script><script type="text/javascript" src="scripts/npm.d3-ease-11427594e8824825be58.js"></script><script type="text/javascript" src="scripts/npm.bootstrap-eb8c85f279cc6f659665.js"></script><script type="text/javascript" src="scripts/npm.d3-collection-0fd1bd50916c0c7ada1c.js"></script><script type="text/javascript" src="scripts/npm.d3-color-99a2435778dea0db3afc.js"></script><script type="text/javascript" src="scripts/npm.d3-drag-5580207cef006986c4e0.js"></script><script type="text/javascript" src="scripts/npm.d3-zoom-ad7efee91527346e50d1.js"></script><script type="text/javascript" src="scripts/npm.d3-brush-1fd2820dc5da17efb6d4.js"></script><script type="text/javascript" src="scripts/npm.d3-time-format-7849f2281042ec78a4bf.js"></script><script type="text/javascript" src="scripts/npm.d3-dsv-9e5a3310744052301f11.js"></script><script type="text/javascript" src="scripts/npm.d3-timer-12e726944fd2b566c57f.js"></script><script type="text/javascript" src="scripts/npm.billboard.js-3713fd1da777526b5ab2.js"></script><script type="text/javascript" src="scripts/npm.d3-dispatch-d3710722d2e4a1549c87.js"></script><script type="text/javascript" src="scripts/npm.d3-path-f72aa2f60351f71aa13a.js"></script><script type="text/javascript" src="scripts/npm.open-sans-all-3771c7b5d67df19b3d82.js"></script><script type="text/javascript" src="scripts/npm.element-remove-6fb02efa6768350d7982.js"></script><script type="text/javascript" src="scripts/npm.jquery-764c249cf76b0080637b.js"></script><script type="text/javascript" src="scripts/npm.jsonstat-790f56e2f6551d91584b.js"></script><script type="text/javascript" src="scripts/npm.l10n.js-c635f82c8f85a7843d68.js"></script><script type="text/javascript" src="scripts/npm.popper.js-389d3c00fb52046da495.js"></script><script type="text/javascript" src="scripts/npm.webpack-2632724ffaa057306b50.js"></script><script type="text/javascript" src="scripts/main-497ab518fe82ad48523e.js"></script></body>
+</html>

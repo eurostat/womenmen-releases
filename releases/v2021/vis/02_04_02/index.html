@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+   <head> 
+      <meta charset="utf-8">
+      <link rel="stylesheet" href="css/bootstrap.min.css">
+      <link rel="stylesheet" href="css/bootstrap-select.css">
+      <link rel="stylesheet" href="css/style.css">
+	  <link rel="stylesheet" href="css/social.css">
+	  <link rel="stylesheet" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+	  
+	  <meta property="og:type"               content="article" />
+	  <meta property="og:title"              content="Eurostat: Mean hourly wages by profession" />
+	  <meta property="og:image"            content="https://ec.europa.eu/eurostat/cache/infographs/womenmen/vis/02_04_02/02_04_02-wages.png" />
+ 
+      <title></title>
+   </head>
+   <body class="page-timeline">
+	<div id="loader" class="loader">
+		<div class="row justify-content-center align-items-center">
+			<i class="fa fa-spin fa-spinner fa-3x fa-fw"></i>
+		</div>
+	</div>
+      <header id="mainTitle">mainTitle</header>
+	  				<img src="images/logoestat.png" class="logo">
+		<div id="social-container" class="socialmedia"></div>
+	    <div id="dashboard" style="display:block;">
+      <div class="chart-container">
+		 <select id="countries" class="show-tick" data-size="12" data-style="btn-flags" style="background-color: #EEF2F4;" onchange="updateCountry(this.value);">
+		 </select>
+         <div id="timeline"></div>
+      </div>
+      <div id="bookmark-container" class="col" style="display:none;">
+        <div class="col">
+          <div class="d-flex justify-content-center">
+            <div id="bookmark-link" class="bookmark"><span>Source: Eurostat - </span><a target="_blank" rel="noopener" href="" class="infolink">access to dataset</a></div>
+          </div>
+        </div>
+      </div>
+      <a class="linkFurtherDetail" href="#" target="blank" id="linkFurtherDetail" title="Link to classification">
+         <p id="furtherDetail">furtherDetail</p>
+      </a>
+		 <p id="footnote1">instructions1</p>
+  </div>
+    <div id="container-modal-instructions" class="modal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div id="instructions-header" class="modal-header"> 
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>                   
+                </div>
+                <div id="instructions" class="modal-body">
+                </div>
+                <div class="modal-footer">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="container-modal-dataset" class="modal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div id="dataset-header" class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div id="dataset" class="modal-body">
+                </div>
+                <div class="modal-footer">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="container-modal-embed" class="modal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div id="embed-header" class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div id="embed" class="modal-body">
+                </div>
+                <div class="modal-footer">
+                </div>
+            </div>
+        </div>
+    </div>
+	 
+      <script src="js/jquery-3.1.1.min.js" type="text/javascript" ></script>
+      <script src="js/labella.js" type="text/javascript"></script>
+      <script src="js/l10n.js/l10n.js" type="text/javascript" ></script>
+      <script src="js/lang.js" type="text/javascript" ></script>
+      <script src="l10n/localisations.js" type="text/javascript" ></script>
+      <script src="js/d3.v3.min.js" type="text/javascript" ></script>
+      <script src="js/constants.js" type="text/javascript" ></script>
+      <script src="js/utils.js" type="text/javascript" ></script>
+      <script src="js/dropdown.js" type="text/javascript" ></script>
+      <script src="js/main.js" type="text/javascript" ></script>
+      <script src="js/bootstrap.js" type="text/javascript" ></script>
+      <script src="js/bootstrap-select.js" type="text/javascript" ></script>
+      <script src="js/json-stat.js" type="text/javascript" ></script>
+    <script src="js/social.js" type="text/javascript"></script>
+	<script src="js/jquery-collision.min.js" type="text/javascript"></script>
+   </body>
+</html>

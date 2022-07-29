@@ -1,0 +1,782 @@
+  /******************************************************************/
+  /* "lifeline" - v"1.0.2"    */
+  /* http://ec.europa.eu/eurostat https://ec.europa.eu/eurostat     */
+  /* Author: Sven Kuncikowski <sven.kuncikowski@sword-group.com>    */
+  /* "Licensed European Union Public Licence (EUPL v.1.1)"          */
+  /******************************************************************/.landscape{	
+	background: #0a468e;
+}
+
+#landscapeImg{	
+    top: 0; 
+	left: 0;
+	right: 0;
+    bottom: 0; 
+	margin: auto;
+	position: fixed;
+	z-index: 99999999;
+}
+
+
+
+
+.subtitle {
+    font-size: 1.2em;
+}
+
+#main{
+	/* width: 90%; */
+	margin-left: auto;
+	margin-right: auto;	
+}
+
+#main h1{
+	text-align: center;
+	font-size: 1.3em;
+}
+
+
+
+
+.footnote-container {
+	margin-top: 10px;
+	font-size: 0.9em;
+    /*float: left;*/
+	/*margin-bottom: 10px;*/
+}
+
+
+html, body {
+    font-family: 'Open Sans', sans-serif;
+    height: 100%;
+}
+
+.container, .row.justify-content-center.align-items-center {
+  height: 100%;
+  min-height: 100%;
+}
+
+.ie .img-fluid {
+    width: 100%
+}
+
+.adjust-margin {
+    margin-bottom: .4rem;
+}
+
+.active {
+  color: #292b2c;
+  background-color: #e6e6e6;
+  background-image: none;
+  border-color: #adadad;
+}
+
+.divider{
+    border-bottom: 2px dotted #ccc; 
+    margin-bottom: 5px;
+    padding-bottom: 2px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Default
+ * No @media query for XS is necessary
+ */
+h3 {
+    font-size: .72em;
+    font-weight: 400;
+}
+
+.logo { 
+    width: 8em;
+} 
+
+
+.subtitle {
+    font-size: .56em;
+}
+
+.image-text {
+    font-size: .6em;
+}
+
+.image-container {
+    padding-left: .5em;
+    padding-right: .5em;
+}
+
+.card-block {
+    display: none;
+}
+
+.card-resp {
+    width: 3em;
+}
+
+.image-text-container {
+    display: block;
+}
+.footnote-container {
+    /* margin-top: 10px; */
+    height: 1.25em;
+    margin-bottom: 1.3em;
+	font-size: .6em;
+}
+
+#btn-axis {
+    font-size: .675em;
+}
+
+/* Small. Above 34em (544px) portrait */
+@media screen and (min-width: 34em) and (orientation:portrait) {
+    h3 {
+        font-size: .9em;
+    }
+    .btn-lg {
+        height: 3.525em;
+    }
+    .subtitle {
+        font-size: .8em;
+    }
+    .image-text {
+        font-size: .5em;
+    }
+    .card-resp {
+        width: 6em;
+    }    
+    .image-container {
+        padding-top: .2em;
+        padding-left: .5em;
+        padding-right: .5em;
+    }    
+    .card-block {
+        display: block;
+        padding: 0;
+    }
+    .image-text-container {
+        display: none;
+    }
+
+}
+
+/* Small. Above 34em (544px) landscape */
+@media screen and (min-width: 34em) and (orientation: landscape) {
+/*mobile screen, same as inittialy*/
+
+}
+
+
+
+/* Medium. Above 48em (768px) */
+@media screen and (min-width: 48em) {
+    .logo { 
+        width: 10em;
+    } 
+
+    .divider{
+        border-bottom: 2px dotted #ccc; 
+        margin-bottom: 10px;
+        padding-bottom: 5px;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }    
+    h3 {
+        font-size: 1.2em;
+    }
+
+    .btn-lg {
+        height: 4em;
+    }
+    
+    .subtitle {
+        font-size: 1em;
+    } 
+    .image-text {
+        font-size: .6em;
+    }
+    .card-resp {
+        width: 7em;
+    }    
+    .card-block {
+        display: block;
+        padding: 0;
+    }
+    .image-text-container {
+        display: none;
+    }
+    .footnote-container {
+        /* margin-top: 10px; */
+        height: 1.25em;
+        margin-bottom: 1.3em;
+        font-size: .8em;
+    }
+
+}
+
+/* Large. Above 62em (992px) */
+@media screen and (min-width: 62em) {
+    .logo { 
+        width: 12.5em;
+    } 
+
+    h3 {
+        font-size: 1.5em;
+    }
+
+    .btn-lg {
+        height: 5.625em;
+    }
+    
+    .subtitle {
+        font-size: 1em;
+    }    
+    
+    /* .image-text {
+        font-size: .9em;
+    }
+    .card-resp {
+        width: 9em;
+    }         */
+}
+
+/* Extra large. Above 75em (1200px) */
+@media screen and (min-width: 75em) {
+    .logo { 
+        width: 14em;
+    }
+    h3 {
+        font-size: 1.75em;
+    }
+
+    .btn-lg {
+        height: 5.625em;
+    }
+    
+    .subtitle {
+        font-size: 1.2em;
+    }    
+     .image-text {
+        font-size: .9em;
+    }
+    .card-resp {
+        width: 10em;
+    }         
+
+}
+.socialmedia a, .socialmedia span {
+  color: #469FFF;    
+  cursor: pointer;
+}
+
+.socialmedia a:hover {
+  text-decoration: none;
+  color: #469FFF;
+}
+.fa-code:hover:before {
+  opacity: 0.5
+}
+.fa-twitter:hover:before {
+  opacity: 0.5
+}
+.fa-facebook:hover:before {
+  opacity: 0.5
+}
+.fa-table:hover:before {
+  opacity: 0.5
+}
+.fa-info:hover:before {
+  opacity: 0.5
+}
+.fa-caret-down:hover:before {
+  opacity: 0.5
+}
+.fa-check-square-o:hover:before {
+  opacity: 0.5
+}
+.fa-square-o:hover:before {
+  opacity: 0.5
+}
+
+.fa-times {
+  color: #000;
+}
+
+.fa-times:hover:before {
+  opacity: 0.5
+}
+
+
+/* Default
+* No @media query for XS is necessary
+*/
+.socialmedia {
+  font-size: .9rem;
+}
+.fa-stack {
+  margin-right: 10px;
+}
+
+.modal-body {
+  font-size: .875em;
+}
+
+.modal-header {
+  font-size: .875em;
+  font-weight: 700;
+}
+
+
+/* Small. Above 34em (544px) */
+@media screen and (min-width: 34em) and (orientation:portrait) {
+  .socialmedia {
+      font-size: .6em;
+  }
+}
+
+/* Small. Above 34em (544px) landscape */
+@media screen and (min-width: 34em) and (orientation:landscape) {
+  /* landscape-specific styles */
+  .socialmedia {
+      font-size: .53em;
+  }
+}
+
+/* Medium. Above 48em (768px) */
+@media screen and (min-width: 48em) {
+  .socialmedia {
+      font-size: .7em;
+  }
+}
+
+/* Large. Above 62em (992px) */
+@media screen and (min-width: 62em) {
+  .socialmedia {
+      font-size: 1em;
+  }
+}
+
+/* Extra large. Above 75em (1200px) */
+@media screen and (min-width: 75em) {
+  .socialmedia {
+      font-size: 1em;
+  }
+
+}
+/* Default
+ * No @media query for XS is necessary
+ */
+ .bb svg {
+  font-family: 'Open Sans', sans-serif;
+  font-size: .55em;
+}
+
+.bb-legend-background {
+  stroke: none;
+}
+
+.bb-tooltip th {
+  background-color: #000;
+}
+
+.bb-tooltip td.value {
+  text-align: left;
+}
+
+.bb-xgrid, .bb-ygrid {
+stroke-dasharray: 8 4;
+shape-rendering: inherit;
+}
+
+.bb .bb-axis-y path, .bb .bb-axis-y line {
+  stroke: transparent;
+}
+
+
+/* Small. Above 34em (544px) portrait */
+@media screen and (min-width: 34em) and (orientation:portrait) {
+  .bb svg {
+     font-size: .6em;
+  }
+}
+
+/* Small. Above 34em (544px) landscape */
+@media screen and (min-width: 34em) and (orientation: landscape) {
+/*mobile screen, same as inittialy*/
+
+}
+
+/* Medium. Above 48em (768px) */
+@media screen and (min-width: 48em) {
+  .bb svg {        
+      font-size: .8em;
+  }
+}
+
+/* Large. Above 62em (992px) */
+@media screen and (min-width: 62em) {
+  .bb svg {        
+      font-size: .875em;
+  }
+}
+
+/* Extra large. Above 75em (1200px) */
+@media screen and (min-width: 75em) {
+
+}
+.clickable {
+    cursor: pointer;
+}
+
+.legend div {
+    display: inline-block;
+    text-align: center;
+    margin-right: 3px;
+    margin-left: 3px;
+}
+
+
+/* Default
+ * No @media query for XS is necessary
+ */
+    .legendcontainer {
+        font-size: 1em;
+    }
+
+    .unuseable {
+        cursor: default;
+        color: grey;
+    }
+
+    .useable {
+        cursor: pointer;
+    }
+
+
+    .legend-text {
+         font-size: 1em; 
+    }
+
+    .box_F {
+        width: 1em; 
+        height: 1em; 
+        background-color: rgb(249,165,27);
+    }
+
+    .box_M {
+        width: 1em; 
+        height: 1em; 
+        background-color: rgb(31,111,184);
+    }
+        
+    .placeholder {
+        width: 1em;
+        height: 1em;
+    }
+
+    .fa-custom {
+        font-size: 1.5em;
+    }
+
+
+/* Small. Above 34em (544px) */
+@media screen and (min-width: 34em) {
+     .legendcontainer {
+        font-size: .9em;
+    }
+
+}
+
+/* Medium. Above 48em (768px) */
+@media screen and (min-width: 48em) {
+    .fa-custom {
+        font-size: 1.5em;
+    }
+
+
+    .legendcontainer {
+        font-size: 1em;
+    }
+
+    .legend-text {
+        font-size: 1.2em; 
+    }
+
+}
+
+/* Large. Above 62em (992px) */
+@media screen and (min-width: 62em) {
+    .fa-custom {
+        font-size: 2em;
+    }
+
+
+    .legendcontainer {
+        font-size: 1em;
+    }
+
+    .legend-text {
+        font-size: 1.5em; 
+    }
+
+}
+
+/* Extra large. Above 75em (1200px) */
+@media screen and (min-width: 75em) {
+    .fa-custom {
+        font-size: 2em;
+    }
+
+
+    .legendcontainer {
+        font-size: 1em;
+    }
+
+    .legend-text {
+        font-size: 1.5em; 
+    }
+
+
+}
+
+#lifeline{
+	/*width: 700px;*/
+	/*width: 1000px;*/
+	/*height: 450px;*/
+    overflow-x: hidden;
+	/*float: left;*/
+	border: 2px dotted #ccc;
+	margin-left: auto;
+	margin-right: auto;
+	font-size: .8em;
+}
+
+#females{
+	position: relative;
+    height: 150px;
+    width: 100%;
+}
+
+.iconIndiF{
+	float: left;
+    width: 80px;
+    text-align: center;
+    font-size: 0.8em;
+	position: absolute;
+	bottom: -1px;
+	/*border-bottom: 1px solid #F7A700;*/
+	border-bottom: 2px solid #F7A700;
+}
+
+.iconIndiF img{
+	width: 100%;
+	cursor: pointer;
+}
+
+#males{
+	position: relative;
+    height: 150px;
+    width: 100%;
+}
+
+.iconIndiM{
+	float: left;
+    width: 80px;
+    text-align: center;
+    font-size: 0.8em;
+	position: absolute;
+	top: -5px;
+}
+
+@-moz-document url-prefix() {
+	.iconIndiM{
+		float: left;
+		width: 80px;
+		text-align: center;
+		font-size: 0.8em;
+		position: absolute;
+		top: -4px;
+	}
+}
+
+.iconIndiM img{
+	width: 100%;
+	/*border-bottom: 1px solid #2C69B2;*/
+	border-top: 2px solid #2C69B2;
+	padding-top: 4px;
+	cursor: pointer;
+}
+
+.back{
+	cursor: pointer;
+   	/*position: absolute;
+    right: 10px;	*/
+    /* float: right; */
+    padding-left: 15px;
+    padding-right: 5px;
+    border: 1px solid #469FFF;
+    border-radius: 50px 0px 0px 50px;
+    color: #fff;
+    background-color: #469FFF;
+	/*width: 50px;*/
+	/*height: 25px;*/
+	/*margin-right: 15px;*/
+	/*margin-top: 10px;*/
+}
+
+#footnotes{
+	margin-top: 10px;
+	font-size: 0.9em;
+    float: left;
+	margin-bottom: 10px;
+	padding-left: 15px;
+}
+
+#codeEmbed{
+	width: 290px;
+    position: absolute;
+    top: 150px;
+    background-color: #fff;
+    color: #000;
+    border: 2px solid #ccc;
+    display: none;
+    padding: 10px;
+    font-size: 12px;
+    font-weight: bold;
+    word-wrap: break-word;
+    line-height: 20px;
+    font-family: Courier;
+    text-align: left;
+}
+
+#screenEmbed{
+	position: absolute;
+    background-color: transparent;
+    top: 0px;
+	display:none;
+}
+
+#equis{
+	position: absolute;
+	right: 3px;
+	top: 0px;
+	cursor: pointer;
+	/*font-family: Arial;*/
+	font-weight: bold;
+}
+
+/***************************/
+/*path {  stroke: #fff; }
+.axis {  font-size: 10px; }
+
+.legend tr:first-child{    border-top:1px solid grey; }
+.legend tr:last-child{    border-bottom:0px solid grey; }
+
+.axis path,
+.axis line {
+  fill: none;*/
+  /* shape-rendering: crispEdges; */
+  /*stroke: #000;
+  stroke-width: 1;
+}
+
+.x.axis path {  display: none; }*/
+
+.country-select {
+  border: 1px solid #000000;
+  background-color: #fff;
+}
+
+.indicator-select {
+  /* border: 1px solid #e1ebf4; */
+  /* background-color: #e1ebf4; */
+  background-color: #ffffff;
+  color: #044AA3;
+}
+
+.indicator-title {
+  font-size: 1.2rem;
+  color: #044AA3;
+}
+
+.dropdown-menu {
+  /* background-color: #e1ebf4; */
+  background-color: #fff;
+  opacity: .9;
+}
+
+.dropdown-item {
+  /* background-color: #e1ebf4; */
+  background-color: #fff;    
+}
+
+.selected {
+  background-color: #044AA3;
+  color: #999999 !important;    
+}
+
+.disabled {
+  cursor: no-drop;
+  color: #cecece !important;    
+}
+
+.a > dropdown-item-inner > disabled  {
+  cursor: no-drop;
+  color: #cecece !important;
+}
+
+div.dropdown-menu inner > a > span > .dropdown-item-inner {
+  cursor: no-drop;
+  color: #cecece !important;
+}
+
+.divider {
+display: inline-block;
+height: 1px;
+background-color: #e5e5e5;
+} 
+
+.btn {
+  /* background-color: #e1ebf4; */
+  background-color: #fff;
+  border: 0;
+  /* background-color: #e1ebf4; */
+}
+
+.countries-mobile-size {
+height: 200px;
+overflow: auto;
+}
+
+.country-selected {
+background-color: lightgrey;
+}
+#countries-container-mobile div div a span .svg-inline--fa  {
+  visibility: hidden;
+}
+#countries-container-desktop div div a span .svg-inline--fa  {
+  visibility: hidden;
+}
+#indicators-container-desktop div div a span .svg-inline--fa  {
+  visibility: hidden;
+}
+#indicators-container div div a span .svg-inline--fa  {
+  visibility: hidden;
+
+}
+#indicators-container-mobile div div a span .svg-inline--fa  {
+  visibility: hidden;
+}
+
+/* make button use all available width */
+.bs-actionsbox .btn-group button {
+  width: 100%;
+} 
+
+@media only screen and (max-height: 500px) {
+  .bootstrap-select.btn-group>.dropdown-toggle {
+    height: 2.1rem;
+  }
+}
+

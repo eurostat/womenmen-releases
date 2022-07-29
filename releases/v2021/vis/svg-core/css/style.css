@@ -1,0 +1,89 @@
+@font-face {
+   	    font-family: 'MyriadPro-BoldCond';
+   	    src: url('../fonts/myriad/MyriadPro-BoldCond.eot');
+   	    src: url('../fonts/myriad/MyriadPro-BoldCond.eot?#iefix') format('embedded-opentype'),
+   	         url('../fonts/myriad/MyriadPro-BoldCond.woff') format('woff'),
+   	         url('../fonts/myriad/MyriadPro-BoldCond.ttf') format('truetype'),
+   	         url('../fonts/myriad/MyriadPro-BoldCond.svg#open_sansregular') format('svg');	
+    
+    	}
+    	@font-face {
+    	    font-family: 'MyriadPro-Cond';
+    	    src: url('../fonts/myriad/MyriadPro-Cond.eot');
+    	    src: url('../fonts/myriad/MyriadPro-Cond.eot?#iefix') format('embedded-opentype'),
+    	         url('../fonts/myriad/MyriadPro-Cond.woff') format('woff'),
+    	         url('../fonts/myriad/MyriadPro-Cond.ttf') format('truetype'),
+    	         url('../fonts/myriad/MyriadPro-Cond.svg#open_sansregular') format('svg');	
+    
+    	}
+    	@font-face {
+    	    font-family: 'MyriadPro-SemiboldCond';
+    	    src: url('../fonts/myriad/MyriadPro-SemiBoldCond.eot');
+    	    src: url('../fonts/myriad/MyriadPro-SemiBoldCond.eot?#iefix') format('embedded-opentype'),
+    	         url('../fonts/myriad/MyriadPro-SemiBoldCond.woff') format('woff'),
+    	         url('../fonts/myriad/MyriadPro-SemiBoldCond.ttf') format('truetype'),
+    	         url('../fonts/myriad/MyriadPro-SemiBoldCond.svg#open_sansregular') format('svg');	
+    
+    	}
+
+body {
+	width: 100%;
+	height: 100%;
+	overflow-x: hidden;
+	overflow-y: auto;
+	font-family: 'Open Sans', sans-serif;
+}
+ 
+#mainImage {
+	margin:0 auto;
+	width:100%;
+}
+.loader {
+    background: #fff none repeat scroll 0 0;
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+	z-index:999;
+}
+.row.justify-content-center.align-items-center {
+    display: block;
+    left: 49%;
+    position: absolute;
+    top: 35%;
+}
+
+#bookmark-container {
+	margin-top:12px;
+}
+#bookmark-link a {
+	color:#007bff;
+}
+.bookmark {
+    color: #000000;
+    font-size: 0.8rem;
+}
+@media screen and (min-width: 34em) and (max-width: 75em) and (orientation: landscape) {
+	.bookmark {
+		font-size: 1rem;
+	}
+}
+.close {
+    color: #000;
+    float: right;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 1;
+    opacity: 0.5;
+    text-shadow: 0 1px 0 #fff;
+}
+.modal-header {
+    padding: 15px;
+    border-bottom: 1px solid #e5e5e5;
+    font-weight: bold;
+	font-size:14px;
+}
+.modal-body {
+	font-size:14px;
+}

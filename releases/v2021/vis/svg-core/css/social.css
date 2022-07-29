@@ -1,0 +1,59 @@
+
+
+.socialmedia{
+    color: #469FFF;
+    cursor: pointer;
+	width:400px;
+    /*font-size: 26px;*/
+}
+.socialmedia span {
+    #font-size: 20px!important;
+}
+.socialmedia a {
+    color: #469FFF;
+}
+.socialmedia a:hover {
+    text-decoration: none;
+    color: #469FFF;
+}
+.fa-code:hover:before {
+    opacity: 0.5
+}
+.fa-twitter:hover:before {
+    opacity: 0.5
+}
+.fa-facebook:hover:before {
+    opacity: 0.5
+}
+.fa-table:hover:before {
+    opacity: 0.5
+}
+.fa-info:hover:before {
+    opacity: 0.5
+}
+.fa-caret-down:hover:before {
+    opacity: 0.5
+}
+.fa-check-square-o:hover:before {
+    opacity: 0.5
+}
+.fa-square-o:hover:before {
+    opacity: 0.5
+}
+
+
+.logo{
+    float: right;
+    margin-top: -22px;
+    position: absolute;
+    right: -9px;
+    top: 10px;
+}
+.socialmedia {
+    color: #469fff;
+    cursor: pointer;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    text-align: center;
+    width: 100%;
+}

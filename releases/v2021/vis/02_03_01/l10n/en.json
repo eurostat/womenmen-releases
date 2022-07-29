@@ -1,0 +1,59 @@
+{
+	"decimal_separator": ".",
+	
+	"title"				: "Managers",
+	
+	"titleWomen"		: "Women", 
+	"titleMen"			: "Men", 
+	
+	"footerData2016"	: "Data refer to 2020.",
+	"footerSource"		: "Source: Eurostat",	
+	
+    "embed-icon": "Embed",
+	"embed_instruction": "Copy this code and paste it in your Website.",
+    "twitter-icon": "Twitter",
+    "facebook-icon": "Facebook",
+	"mail-icon": "Mail",
+    "embed": "Embed this chart",
+	"modalClose": "Close",
+	
+	"linkSource" : "Source: Eurostat - ",
+	"linkText": "access to dataset",
+
+	"EU": "EU",
+	"AT": "AUSTRIA",
+	"BE": "BELGIUM",
+	"BG": "BULGARIA",
+	"CY": "CYPRUS",
+	"CZ": "CZECHIA",
+	"DE": "GERMANY",
+	"DK": "DENMARK",
+	"EE": "ESTONIA",
+	"EL": "GREECE",
+	"ES": "SPAIN",
+	"FI": "FINLAND",
+	"FR": "FRANCE",
+	"HR": "CROATIA",
+	"HU": "HUNGARY",
+	"IE": "IRELAND",
+	"IT": "ITALY",
+	"LT": "LITHUANIA",
+	"LU": "LUXEMBOURG",
+	"LV": "LATVIA",
+	"MT": "MALTA",
+	"NL": "NETHERLANDS",
+	"PL": "POLAND",
+	"PT": "PORTUGAL",
+	"RO": "ROMANIA",
+	"SE": "SWEDEN",
+	"SI": "SLOVENIA",
+	"SK": "SLOVAKIA",
+	"UK": "UNITED KINGDOM",
+	"CH": "SWITZERLAND",
+	"IS": "ICELAND",
+	"NO": "NORWAY",
+	
+	"MC":  "MACEDONIA",	
+	"TK":  "TURKEY"
+	
+}

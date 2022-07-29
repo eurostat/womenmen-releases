@@ -1,0 +1,100 @@
+/* ************ The Modal Popup ************ */
+
+.Modal {
+	top: 0;
+	left: 0;
+	width: 100%;
+    height: 100%;
+	z-index: 1001;
+    display: none;
+	overflow: hidden;
+    position: fixed;
+	cursor: default !important;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+}
+
+.Modal-Content {
+	width: 50%; 
+    margin: 15% auto; /* 15% from the top and centered */
+    border: 1px solid #888;
+	position: relative;
+	background-color: #fefefe;
+	border-radius: 6px;
+	box-shadow: 0 3px 5px #414141;
+}
+
+.Modal-Title {
+	top: 50%;
+	left: 12px;
+	position: absolute;
+	transform: translateY(-50%);
+	font-size: 14px;
+	font-weight: bold;
+}
+
+.Modal-Header {
+	height: 20px;
+	padding: 15px;
+	font-size: 13px;
+	position: relative;
+	border-radius: 4px 4px 0px 0px;
+	border-bottom: 1px solid #e5e5e5;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: rgb(229, 229, 229);
+}
+
+.Modal-Body {
+    width: 98%;
+	padding: 15px;
+	font-size: 14px;
+	margin-left: -5px;
+	overflow-wrap: break-word;
+}
+
+.Modal-Body a {
+	color: #469FFF;
+	font-size: 14px;
+}
+
+.Modal-Body p {
+	font-size: 14px;
+}
+
+.Modal-Body a:hover {
+	color: #4682b4;
+}
+
+.Modal-Footer {
+    padding: 15px;
+	padding-top: 15px;
+	padding-right: 15px;
+	padding-bottom: 15px;
+	padding-left: 15px;
+    text-align: right;
+    border-top: 1px solid #e5e5e5;
+	border-top-width: 1px;
+	border-top-style: solid;
+	border-top-color: rgb(229, 229, 229);
+	position: relative;
+}
+
+.close-btn {
+	top: 55%;
+	right: 15px;
+	color: #000;
+	font-size: 28px;
+    font-weight: bold;
+	position: absolute;
+	transform: translateY(-50%);
+}
+
+.close-btn:hover, .close:focus {
+    color: #000;
+    cursor: pointer;
+	opacity: 0.5;
+	text-decoration: none;
+}
+
+/* ******* End Modal Popup ******* */

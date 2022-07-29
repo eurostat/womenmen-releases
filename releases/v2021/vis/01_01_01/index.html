@@ -1,0 +1,218 @@
+<!--[if IE]><!DOCTYPE html><!--><!--
+    /******************************************************************/
+  /* "lifeline" - v"1.0.2"    */
+  /* http://ec.europa.eu/eurostat https://ec.europa.eu/eurostat     */
+  /* Author: Sven Kuncikowski <sven.kuncikowski@sword-group.com>    */
+  /* "Licensed European Union Public Licence (EUPL v.1.1)"          */
+  /******************************************************************/
+  <![endif]--><!DOCTYPE html>
+<html>
+  <head>
+    <title>Eurostat Digital Publication - Lifeline</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta property="og:type" content="article" />
+    <meta
+      property="og:title"
+      content="Eurostat: Lifeline of women and men in the EU"
+    />
+    <meta
+      property="og:image"
+      content="https://ec.europa.eu/eurostat/cache/infographs/womenmen/images/bloc-1/bloc1a-lifeLine_en.png"
+    />
+  <meta property="og:title" content="Lifeline of women and men in the EU"><meta property="og:description" content="Lifeline of women and men in the EU"><meta property="og:image:alt" content="Lifeline of women and men in the EU"><link href="styles/npm.bootstrap.2e7120d9d921952b863c.css" rel="stylesheet"><link href="styles/npm.billboard.js.413012e53ee5835526f8.css" rel="stylesheet"><link href="styles/npm.bootstrap-select-v4.f8630538b616e85aa188.css" rel="stylesheet"><link href="styles/npm.open-sans-all.78b4c79a978b5305bda0.css" rel="stylesheet"><link href="styles/main.43827aace6e284cb4551.css" rel="stylesheet"></head>
+
+  <body>
+    <div id="loader" class="container">
+      <div class="row justify-content-center align-items-center">
+        <i class="fa fa-spin fa-spinner fa-3x fa-fw"></i>
+      </div>
+    </div>
+
+    <div
+      id="no-portrait-container"
+      class="container"
+      style="display: none;"
+    ></div>
+
+    <div id="global" style="display: none;" class="container-fluid">
+      <div id="main">
+        <!-- <div id="main" class="invisible" style="display:block;"> -->
+
+        <div class="row">
+          <div class="col">
+            <h3>
+              <strong id="title">title</strong>
+            </h3>
+          </div>
+          <div class="col-3">
+            <div class="d-flex justify-content-end">
+              <div id="logo" class="logo"></div>
+            </div>
+          </div>
+        </div>
+        <div class="row justify-content-between" style="padding-left: 15px;">
+          <div id="countries-container-desktop">
+            <select
+              id="countries-desktop"
+              class="selectpicker country-select"
+              data-size="12"
+              data-style="btn-flags"
+            ></select>
+          </div>
+          <div id="back-button" class="invisible" style="padding-right: 15px;">
+            <span id="back" class="back">back</span>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col">
+            <div id="lifeline">
+              <div id="females"></div>
+              <div id="lifelineruler">
+                <svg id="lifebar" width="50" height="100"></svg>
+              </div>
+              <div id="males"></div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div id="graph-container" class="col">
+            <div id="barchart"></div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col footnote-container">
+            <div id="footnote" class="footnotes">footnote</div>
+          </div>
+        </div>
+        <div class="row align-items-end">
+          <div id="button-col" class="col">
+            <div id="axis-flex" class="d-flex justify-content-start">
+              <button id="btn-axis" class="btn btn-light btn-sm">scale</button>
+            </div>
+          </div>
+          <div id="legend-col" class="col-5 col-auto">
+            <div id="legend-flex" class="d-flex justify-content-center">
+              <div id="legend-container" class="legendcontainer"></div>
+            </div>
+          </div>
+          <div id="social-col" class="col col-3">
+            <div id="social-flex" class="d-flex justify-content-end">
+              <div id="social-container" class="socialmedia"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="row">
+          <div id="bookmark-flex" class="d-flex justify-content-center mx-auto">
+            <div id="bookmark-container" class="legendcontainer"></div>
+              <div id="bookmark-link" class="legendcontainer"></div>
+          </div>
+      </div>
+
+
+    </div>
+
+    <div id="change-orientation" class="container invisible">
+      <div class="row justify-content-center align-items-center">
+        <i class="fa fa-spin fa-refresh fa-3x fa-fw"></i>
+      </div>
+    </div>
+
+    <div
+      id="container-modal-instructions"
+      class="modal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="mySmallModalLabel"
+    >
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div id="instructions-header" class="modal-header">
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div id="instructions" class="modal-body"></div>
+          <div id="dummy-header" class="modal-header"></div>
+          <!-- <div id="informations-header" class="modal-header"></div> -->
+          <!-- <div id="informations" class="modal-body"></div> -->
+          <div class="modal-footer"></div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      id="container-modal-embed"
+      class="modal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="mySmallModalLabel"
+    >
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div id="embed-header" class="modal-header">
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div id="embed" class="modal-body"></div>
+          <div class="modal-footer"></div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      id="container-modal-dataset"
+      class="modal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="mySmallModalLabel"
+    >
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div id="dataset-header" class="modal-header">
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div id="dataset" class="modal-body"></div>
+          <div class="modal-footer"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- needed for localisation, otherwise it is not available -->
+    <script
+      type="text/javascript"
+      src="./l10n/localisations.js"
+      charset="utf-8"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./config/configuration.js"
+      charset="utf-8"
+    ></script>
+  <script type="text/javascript" src="scripts/runtime.0e9bf92752993e0aedff.js"></script><script type="text/javascript" src="scripts/npm.core-js-f67896d90d4479cda945.js"></script><script type="text/javascript" src="scripts/npm.d3-shape-f8c55f11a89a902ca2a6.js"></script><script type="text/javascript" src="scripts/npm.d3-selection-ec9106b0d3c90989c521.js"></script><script type="text/javascript" src="scripts/npm.d3-array-cfdbd289f7ccbb78c333.js"></script><script type="text/javascript" src="scripts/npm.d3-transition-b8bfd6e1713fb444e0df.js"></script><script type="text/javascript" src="scripts/npm.d3-interpolate-46e8e7f303ad27ada61a.js"></script><script type="text/javascript" src="scripts/npm.d3-scale-67147a1e7e711a1aaecf.js"></script><script type="text/javascript" src="scripts/npm.d3-time-6d650a537501af4bc1c2.js"></script><script type="text/javascript" src="scripts/npm.d3-format-687b576930271eb06987.js"></script><script type="text/javascript" src="scripts/npm.fortawesome-e7c69d077f10d9906dec.js"></script><script type="text/javascript" src="scripts/npm.d3-ease-bed22bbcc4b96c98e342.js"></script><script type="text/javascript" src="scripts/npm.bootstrap-b3900e65aef3627058d3.js"></script><script type="text/javascript" src="scripts/npm.d3-collection-9a56a9e26f4c1500deed.js"></script><script type="text/javascript" src="scripts/npm.d3-color-97cc1a0511b065cef276.js"></script><script type="text/javascript" src="scripts/npm.d3-drag-b468fdf7aed72298d710.js"></script><script type="text/javascript" src="scripts/npm.d3-zoom-bab2ba1802ef3f5fe378.js"></script><script type="text/javascript" src="scripts/npm.d3-brush-328d986e370f6d796eff.js"></script><script type="text/javascript" src="scripts/npm.d3-time-format-6415fa3b9aba0aca4c7e.js"></script><script type="text/javascript" src="scripts/npm.d3-dsv-98ac8f664fab8e3dff89.js"></script><script type="text/javascript" src="scripts/npm.d3-timer-fee361921a3920079922.js"></script><script type="text/javascript" src="scripts/npm.billboard.js-e7ad36e61d465e93d359.js"></script><script type="text/javascript" src="scripts/npm.bootstrap-select-v4-40ed49c870be2b7b7829.js"></script><script type="text/javascript" src="scripts/npm.d3-dispatch-2abf65e83610c37322a9.js"></script><script type="text/javascript" src="scripts/npm.d3-path-efc8e46b0ba044228c2d.js"></script><script type="text/javascript" src="scripts/npm.open-sans-all-7dc5e5fd4576341765dd.js"></script><script type="text/javascript" src="scripts/npm.element-remove-1bd5e76d55497aa72650.js"></script><script type="text/javascript" src="scripts/npm.jquery-b617a24c112ae9f7818b.js"></script><script type="text/javascript" src="scripts/npm.jsonstat-c940fbd8b1e66f2cde15.js"></script><script type="text/javascript" src="scripts/npm.l10n.js-6052628fe33bc7805330.js"></script><script type="text/javascript" src="scripts/npm.popper.js-32fb0ce4a1a5d4321d0b.js"></script><script type="text/javascript" src="scripts/npm.webpack-c5c057309c633bcb7f88.js"></script><script type="text/javascript" src="scripts/main-2ef2992b01042088af48.js"></script></body>
+</html>
+

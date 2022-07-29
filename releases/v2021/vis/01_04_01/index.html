@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+
+	<head>
+	
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width,user-scalable=1.0,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+		
+		<meta property="og:title" content="Overall life satisfaction, 2018"/>
+		<meta property="og:type" content="game"/>
+		<meta property="og:url" content="https://ec.europa.eu/eurostat/cache/infographs/womenmen/vis/lifesatisfaction/"/>
+		<meta property="og:image" content="https://ec.europa.eu/eurostat/cache/infographs/womenmen/images/bloc-1/bloc1d-overallSatisfaction_en.png"/>
+		<meta property="og:site_name" content="The life of women and men in Europe"/>
+		<meta property="og:description" content="Playful application to compare the life satisfaction of women and men aged 16 and over in EU Member States and EFTA countries."/>
+
+		<meta name="description" content="">
+		<meta name="author" content="EUROSTAT">
+
+		<!-- CSS concatenated and minified via ant build script-->
+		<link rel="stylesheet" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="css/modal-popup.css">
+		<!-- end CSS-->	
+		
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="format-detection" content="telephone=no">
+		
+		<title id="infographTitle"></title>
+		
+		<!-- Piwik -->
+		<script>
+			var parentLocation = parent.location;
+			if (parentLocation.hostname.indexOf('ec.europa.eu') !== -1) {
+				document.write('<script defer src="//europa.eu/webtools/load.js" type="text/javascript"></sc' + 'ript>');
+				document.write('<script type="application/json">');
+				document.write('{ "utility" : "piwik", "siteID" : 59, "sitePath" : ["ec.europa.eu\/eurostat"] }');
+				document.write('</sc' + 'ript>');
+			}
+		</script>
+		<!-- End Piwik Code -->
+		
+	</head>
+
+	<body>
+
+		<div id="loader" class="loader">
+			<div class="row justify-content-center align-items-center">
+				<i class="fa fa-spin fa-spinner fa-3x fa-fw loading"></i>
+			</div>
+		</div>
+
+		<div id="container" class="">
+		
+			<div id="main" role="main">
+				<div id="indicatorInfos" style="position:relative;">
+					<span id="indicatorName"></span>
+					<a id="logoEstat" href="http://ec.europa.eu/eurostat/" target="_blank" >
+						<img src="img/estat_logo.png"/>
+					</a>
+					<span id="indicatorUnit"></span>
+				</div>
+				
+				<div id="randomTxt">
+					<img id="ie18nRandomTitle" src="img/randomIcon.png" title="">
+					<span id="ie18nRandom"></span>
+				</div>
+				
+				<div id="vis"></div>
+				
+				<div id="scaleWrapper"></div>
+				
+				<div id="themasWrapper">
+					<div id="icons">
+						<ul></ul>
+						<div id="themaBtnGroup">
+							<div class="themaBtnContainer"><span id="femaleBtnLabel"></span></div>
+							<div class="themaBtnContainer"><span id="maleBtnLabel"></span></div>
+						</div>
+					</div>
+					<div class="data-bookmark"></div>
+					<div id="shareDisplay" style="display:block;"></div>
+				</div>
+				
+				<div id="noData" style="display:none;">
+					<img src="icons/countries/not_selected/noData_en.png">
+					<span>No Data</span>
+				</div>				 
+				
+				<div id="countriesConteiner" style="display:none;">
+					<span id="countriesTitle" class="ui-widget-header"><span id="titleHighlightMS"></span></span>
+					<div id="countriesClosebutton"><img src="icons/buttonClose.png" style=""/></div>
+					<ul id="memberStateContent" style="display:inline-block;"></ul>
+					<hr class="brxtSeparator">
+					<ul id="estatContent"></ul>
+				</div> 
+				
+			</div>
+			
+			<div class="data-footnote"></div>
+			<!-- <div class="data-bookmark"></div> -->
+			
+		</div>
+			 
+		<script src="js/d3.min.js"></script>
+		<script src="js/modernizr-2.0.6.min.js"></script>
+		<script src="js/l10n.min.js"></script>
+		<script src="js/lang.js"></script>
+		<script src="l10n/localisations.js"></script>
+		<script src="js/constants.js"></script>
+		<script src="js/d3.csv.min.js"></script>
+		<script src="js/d3.layout.min.js"></script>
+		<script src="js/d3.geom.min.js"></script>
+		<script src="js/jquery-1.6.2.min.js"></script>
+		<script src="js/jquery-ui.min.js"></script>
+		<script src="js/CustomTooltip.js"></script>
+		<script src="js/modal-popup.js"></script>
+		<script src="js/main.js"></script>
+		<script src="js/json-stat.js"></script>	
+		<script src="js/json-stat.utils.js"></script>	
+		
+	</body>
+
+</html>

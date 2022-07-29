@@ -1,0 +1,504 @@
+  /******************************************************************/
+  /* "nutrition" - v"1.0.2"    */
+  /* http://ec.europa.eu/eurostat https://ec.europa.eu/eurostat     */
+  /* Author: Sven Kuncikowski <sven.kuncikowski@sword-group.com>    */
+  /* "Licensed European Union Public Licence (EUPL v.1.1)"          */
+  /******************************************************************/html, body {
+    font-family: 'Open Sans', sans-serif;
+    height: 100%;
+}
+
+.container, .row.justify-content-center.align-items-center {
+  height: 100%;
+  min-height: 100%;
+}
+
+.ie .img-fluid {
+    width: 100%
+}
+
+.adjust-margin {
+    margin-bottom: .4rem;
+}
+
+.active {
+  color: #292b2c;
+  background-color: #e6e6e6;
+  background-image: none;
+  border-color: #adadad;
+}
+
+.divider{
+    border-bottom: 2px dotted #ccc; 
+    margin-bottom: 5px;
+    padding-bottom: 2px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.image-container:hover {
+    background-color: #e6e6e6;
+    cursor: pointer;
+}
+
+
+/* Default
+ * No @media query for XS is necessary
+ */
+h3 {
+    font-size: .72em;
+    font-weight: 400;
+}
+
+.logo { 
+    width: 8em;
+} 
+
+
+.subtitle {
+    font-size: .56em;
+}
+
+.image-text {
+    font-size: .6em;
+}
+
+.image-container {
+    padding-left: .5em;
+    padding-right: .5em;
+}
+
+.card-block {
+    display: none;
+}
+
+.card-resp {
+    width: 3em;
+}
+
+.image-text-container {
+    display: block;
+}
+.footnote-container {
+    /* margin-top: 10px; */
+    height: 1.25em;
+    margin-bottom: 1.3em;
+	font-size: .6em;
+}
+
+#btn-axis {
+    font-size: .675em;
+}
+
+/* Small. Above 34em (544px) portrait */
+@media screen and (min-width: 34em) and (orientation:portrait) {
+    h3 {
+        font-size: .9em;
+    }
+    .btn-lg {
+        height: 3.525em;
+    }
+    .subtitle {
+        font-size: .8em;
+    }
+    .image-text {
+        font-size: .5em;
+    }
+    .card-resp {
+        width: 6em;
+    }    
+    .image-container {
+        padding-top: .2em;
+        padding-left: .5em;
+        padding-right: .5em;
+    }    
+    .card-block {
+        display: block;
+        padding: 0;
+    }
+    .image-text-container {
+        display: none;
+    }
+
+}
+
+/* Small. Above 34em (544px) landscape */
+@media screen and (min-width: 34em) and (orientation: landscape) {
+/*mobile screen, same as inittialy*/
+
+}
+
+
+
+/* Medium. Above 48em (768px) */
+@media screen and (min-width: 48em) {
+    .logo { 
+        width: 10em;
+    } 
+
+    .divider{
+        border-bottom: 2px dotted #ccc; 
+        margin-bottom: 10px;
+        padding-bottom: 5px;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }    
+    h3 {
+        font-size: 1.2em;
+    }
+
+    .btn-lg {
+        height: 4em;
+    }
+    
+    .subtitle {
+        font-size: 1em;
+    } 
+    .image-text {
+        font-size: .6em;
+    }
+    .card-resp {
+        width: 7em;
+    }    
+    .card-block {
+        display: block;
+        padding: 0;
+    }
+    .image-text-container {
+        display: none;
+    }
+    .footnote-container {
+        /* margin-top: 10px; */
+        height: 1.25em;
+        margin-bottom: 1.3em;
+        font-size: .8em;
+    }
+
+}
+
+/* Large. Above 62em (992px) */
+@media screen and (min-width: 62em) {
+    .logo { 
+        width: 12.5em;
+    } 
+
+    h3 {
+        font-size: 1.5em;
+    }
+
+    .btn-lg {
+        height: 5.625em;
+    }
+    
+    .subtitle {
+        font-size: 1em;
+    }    
+    
+    /* .image-text {
+        font-size: .9em;
+    }
+    .card-resp {
+        width: 9em;
+    }         */
+}
+
+/* Extra large. Above 75em (1200px) */
+@media screen and (min-width: 75em) {
+    .logo { 
+        width: 14em;
+    }
+    h3 {
+        font-size: 1.75em;
+    }
+
+    .btn-lg {
+        height: 5.625em;
+    }
+    
+    .subtitle {
+        font-size: 1.2em;
+    }    
+     .image-text {
+        font-size: .9em;
+    }
+    .card-resp {
+        width: 10em;
+    }         
+
+}
+.socialmedia a, .socialmedia span {
+  color: #469FFF;    
+  cursor: pointer;
+}
+
+.socialmedia a:hover {
+  text-decoration: none;
+  color: #469FFF;
+}
+.fa-code:hover:before {
+  opacity: 0.5
+}
+.fa-twitter:hover:before {
+  opacity: 0.5
+}
+.fa-facebook:hover:before {
+  opacity: 0.5
+}
+.fa-table:hover:before {
+  opacity: 0.5
+}
+.fa-info:hover:before {
+  opacity: 0.5
+}
+.fa-caret-down:hover:before {
+  opacity: 0.5
+}
+.fa-check-square-o:hover:before {
+  opacity: 0.5
+}
+.fa-square-o:hover:before {
+  opacity: 0.5
+}
+
+.fa-times {
+  color: #000;
+}
+
+.fa-times:hover:before {
+  opacity: 0.5
+}
+
+
+/* Default
+* No @media query for XS is necessary
+*/
+.socialmedia {
+  font-size: .9rem;
+}
+.fa-stack {
+  margin-right: 10px;
+}
+
+.modal-body {
+  font-size: .875em;
+}
+
+.modal-header {
+  font-size: .875em;
+  font-weight: 700;
+}
+
+
+/* Small. Above 34em (544px) */
+@media screen and (min-width: 34em) and (orientation:portrait) {
+  .socialmedia {
+      font-size: .6em;
+  }
+}
+
+/* Small. Above 34em (544px) landscape */
+@media screen and (min-width: 34em) and (orientation:landscape) {
+  /* landscape-specific styles */
+  .socialmedia {
+      font-size: .53em;
+  }
+}
+
+/* Medium. Above 48em (768px) */
+@media screen and (min-width: 48em) {
+  .socialmedia {
+      font-size: .7em;
+  }
+}
+
+/* Large. Above 62em (992px) */
+@media screen and (min-width: 62em) {
+  .socialmedia {
+      font-size: 1em;
+  }
+}
+
+/* Extra large. Above 75em (1200px) */
+@media screen and (min-width: 75em) {
+  .socialmedia {
+      font-size: 1em;
+  }
+
+}
+/* Default
+ * No @media query for XS is necessary
+ */
+ .bb svg {
+  font-family: 'Open Sans', sans-serif;
+  font-size: .55em;
+}
+
+.bb-legend-background {
+  stroke: none;
+}
+
+.bb-tooltip th {
+  background-color: #000;
+}
+
+.bb-tooltip td.value {
+  text-align: left;
+}
+
+.bb-xgrid, .bb-ygrid {
+stroke-dasharray: 8 4;
+shape-rendering: inherit;
+}
+
+.bb .bb-axis-y path, .bb .bb-axis-y line {
+  stroke: transparent;
+}
+
+
+/* Small. Above 34em (544px) portrait */
+@media screen and (min-width: 34em) and (orientation:portrait) {
+  .bb svg {
+     font-size: .6em;
+  }
+}
+
+/* Small. Above 34em (544px) landscape */
+@media screen and (min-width: 34em) and (orientation: landscape) {
+/*mobile screen, same as inittialy*/
+
+}
+
+/* Medium. Above 48em (768px) */
+@media screen and (min-width: 48em) {
+  .bb svg {        
+      font-size: .8em;
+  }
+}
+
+/* Large. Above 62em (992px) */
+@media screen and (min-width: 62em) {
+  .bb svg {        
+      font-size: .875em;
+  }
+}
+
+/* Extra large. Above 75em (1200px) */
+@media screen and (min-width: 75em) {
+
+}
+.clickable {
+  cursor: pointer;
+}
+
+.legend div {
+  display: inline-block;
+  text-align: center;
+  margin-right: 3px;
+  margin-left: 3px;
+}
+
+
+/* Default
+* No @media query for XS is necessary
+*/
+  .legendcontainer {
+      font-size: 1em;
+  }
+
+  .unuseable {
+      cursor: default;
+      color: grey;
+  }
+
+  .useable {
+      cursor: pointer;
+  }
+
+
+  .legend-text {
+       font-size: 1em; 
+  }
+
+  .box_F {
+      width: 1em; 
+      height: 1em; 
+      background-color: rgb(249,165,27);
+  }
+
+  .box_M {
+      width: 1em; 
+      height: 1em; 
+      background-color: rgb(31,111,184);
+  }
+      
+  .placeholder {
+      width: 1em;
+      height: 1em;
+  }
+
+  .fa-custom {
+      font-size: 1.5em;
+  }
+
+
+/* Small. Above 34em (544px) */
+@media screen and (min-width: 34em) {
+   .legendcontainer {
+      font-size: .9em;
+  }
+
+}
+
+/* Medium. Above 48em (768px) */
+@media screen and (min-width: 48em) {
+  .fa-custom {
+      font-size: 1.5em;
+  }
+
+
+  .legendcontainer {
+      font-size: 1em;
+  }
+
+  .legend-text {
+      font-size: 1.2em; 
+  }
+
+}
+
+/* Large. Above 62em (992px) */
+@media screen and (min-width: 62em) {
+  .fa-custom {
+      font-size: 2em;
+  }
+
+
+  .legendcontainer {
+      font-size: 1em;
+  }
+
+  .legend-text {
+      font-size: 1.5em; 
+  }
+
+}
+
+/* Extra large. Above 75em (1200px) */
+@media screen and (min-width: 75em) {
+  .fa-custom {
+      font-size: 2em;
+  }
+
+
+  .legendcontainer {
+      font-size: 1em;
+  }
+
+  .legend-text {
+      font-size: 1.5em; 
+  }
+
+
+}

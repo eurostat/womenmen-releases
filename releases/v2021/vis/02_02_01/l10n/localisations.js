@@ -1,0 +1,1 @@
+window.defaultLanguage="en",window.availableLanguages={fr:"l10n/fr.json",en:"l10n/en.json",de:"l10n/de.json"};

@@ -1,0 +1,60 @@
+.Womenmen {
+    font-family: "Open Sans";
+    font-size: 12px;
+}
+.Womenmen .logol {
+    height: 70px;
+    position: absolute;
+    right: 39px;
+    top: -96px;
+}
+.Womenmen .navbar-toggler {
+    display:none;
+}
+.Womenmen .navbar {
+    min-height: 0px;
+}
+
+.Womenmen .title{
+    color: black;
+    display: inline-block;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    margin-top: 30px;
+    text-align: center;
+}
+.Womenmen #secondTitle {
+    width: 100%;
+    display: block;
+    text-align: center;
+    #margin-left: -40px;
+    font-size: 18px;
+    font-weight:normal;
+}
+.Womenmen #secondTitleLegend {
+    width: 100%;
+    display: block;
+    text-align: center;
+    #margin-left: -40px;
+    font-size: 10px;
+    font-style: italic;
+}
+.Womenmen #navbarNavDesktop {
+    display:none!important;
+}
+
+@media (min-width: 1000px) {
+    .Womenmen  header {
+        margin-bottom:-10px;
+    }
+
+    .Womenmen  #linkDataset {
+        margin-top:0px!important;
+    }
+    .Womenmen  #barTitleConteiner {
+        margin-top: -60px!important;
+        margin-bottom: -10px;
+        display: inline-block;
+    }
+}

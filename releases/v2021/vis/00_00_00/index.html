@@ -1,0 +1,80 @@
+<!doctype html>
+
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title></title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="styles/npm.bootstrap_07c89809873a808bc5f09.css" rel="stylesheet"><link href="styles/npm.open-sans-all_45d5ae1ff410fd6359d37.css" rel="stylesheet"><link href="styles/womenmen_quiz.d50d59e7a4986151b470.css" rel="stylesheet"></head>
+
+<body>
+
+  <div id="block-header"></div>
+
+  <div class="container-fluid">
+    <div id="title"></div>
+  </div>
+
+  <section id="intropage-container">
+    <div class="container-fluid">
+      <div id="intropage-title-wrapper" class="question-header-bg"></div>
+      <div id="intropage">
+        <button id="start-quiz-button" class="btn btn-primary"></button>
+      </div>
+    </div>
+  </section>
+
+  <section id="question-container">
+    <div class="container-fluid">
+      <div id="question-title-wrapper" class="question-header-bg"></div>
+      <div id="question"></div>
+      <div class="row" id="answers">
+        <div id="choices" class="col-sm-8">
+          <ol id="choices-container" class="alpha"></ol>
+        </div>
+        <div class="col-sm-4" id="icon">
+        </div>
+      </div>
+      <div id="result" class="invisible">
+        <div id="single-result-message"></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="results-container">
+    <div class="container-fluid">
+      <div id="result-title-wrapper" class="question-header-bg">
+        <img src="./img/education.svg" height="60" /><span class="question-title" id="result-question-title"></span>
+      </div>
+      <div id="result-explanation"></div>
+      <button id="restart-button" class="btn btn-primary"><span id="restart-message"></span> <span class="glyphicon glyphicon-repeat"></span></button>
+    </div>
+  </section>
+
+  <div id="footer" class="container-fluid">
+    <div class="row">
+      <div class="col-md-5"></div>
+      <div class="col-md-2"></div>
+      <div class="col-md-5 text-right">
+        <a id="logo" href="//ec.europa.eu/eurostat" target="_blank"><img src="./img/logo.jpg"></a>
+        <button id="next-question-button" type="submit" class="btn btn-primary invisible"><span id="next-question-message"></span> <span class="glyphicon glyphicon-arrow-right"></span></button>
+        <button id="result-button" class="btn btn-primary invisible"><span id="result-button-message"></span> <span class="glyphicon glyphicon-object-align-bottom"></span></button>
+      </div>
+
+    </div>
+
+    <!-- choice-template, will not be run or displayed, but is only used for templating, each answer choice is repeating this-->
+    <script id="choice-template" type="text/html">
+      <li><span data-content="answer"></span></li>
+    </script>
+
+    <!-- needed for localisation, otherwise it is not available -->
+    <script type="text/javascript" src="./l10n/localisations.js" charset="utf-8"></script>
+    <script type="text/javascript" src="./config/configuration.js" charset="utf-8"></script>
+    <script type="text/javascript" src="./config/questions.js" charset="utf-8"></script>
+
+<script type="text/javascript" src="js/npm.bootstrap.7c89809873a808bc5f09.js"></script><script type="text/javascript" src="js/npm.open-sans-all.5d5ae1ff410fd6359d37.js"></script><script type="text/javascript" src="js/npm.jquery.loadtemplate.426c7fab73193d0d1030.js"></script><script type="text/javascript" src="js/npm.jquery.05fda3aa6842d7ea7203.js"></script><script type="text/javascript" src="js/npm.l10n.js.68ebde7e5b208e07a32e.js"></script><script type="text/javascript" src="js/womenmen_quiz.463ace6bb7094bf623c5.js"></script></body>
+
+</html>

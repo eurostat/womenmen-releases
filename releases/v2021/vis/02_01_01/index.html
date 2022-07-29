@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>	
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/bootstrap-select.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/social.css">
+    <link rel="stylesheet" href="css/legend.css">
+    <link rel="stylesheet" href="css/pub_specific.css">
+    <link rel="stylesheet" href="css/c3.css">
+    <link rel="stylesheet" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+	
+	<meta property="og:type"               content="article" />
+	<meta property="og:title"              content="Eurostat: Education levels" />
+	<meta property="og:image"            content="https://ec.europa.eu/eurostat/cache/infographs/womenmen/vis/02_01_01/02_01_01-education.png" />
+	
+</head>
+
+<body>
+    <div class="conteiner-fluid" id="mainConteiner">
+        <div class="row toolbar">
+                <div class="col-md col-md-offset-0">	
+                        <div class="navbar navbar-expand-sm navbar-light text-left">
+                                <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarNavDesktop" aria-controls="navbarNavDesktop" aria-expanded="false" aria-label="Toggle navigation">
+                                        <span class="navbar-toggler-icon"></span>
+                                </button>
+                                <div id="logoConteiner" class="navbar-brand logo float-right order-2" >
+                                    <div id='nsiConteiner'>
+                                    </div>
+                                    <a id="logo-desktop" href="https://ec.europa.eu/eurostat" >
+                                        <img class="img-fluid" src="img/logoestat.png" id="estatLogo">
+                                    </a>
+                                </div>
+                                <div id="navbarNavDesktop" class="navbar-nav mr-auto collapse navbar-expand-sm navbar-collapse">
+                                    <div id="social-container" class="socialmedia">
+            
+                                    </div>
+                                </div>
+                                <div id="loader" class="loader">
+                                    <div class="row justify-content-center align-items-center">
+                                        <i class="fa fa-spin fa-spinner fa-3x fa-fw"></i>
+                                    </div>
+                                </div>
+                            </div>
+                  </div>
+
+        </div>
+        <div class="row" id="titleConteiner">
+            <div class="col-md-12">
+                <header>
+                    <h3 id="title" class="title">title</h3>
+                </header>
+            </div>
+        </div>
+        <div class="row" id="pies_legend">
+            <div class="col-md-2 col-md-offset-1 pie pieFirst">
+                <div class="images">
+                    <img src="" class="left" id="leftIcon">
+                </div>
+                <div id="pieLeft" class="pieItem"></div>
+            </div>
+            <div class="col-md-6" id="pieCentral">
+                <div id="dashboard1"></div>
+            </div>
+
+            <div class="col-md-2 pie">
+                <div class="images">
+                    <img src="" class="right" id="rigthIcon">
+                </div>
+                <div id="pieRight" class="pieItem">
+                </div>
+            </div>
+        </div>
+        <div class="row"  id="barTitleConteiner">
+            <div class="col-md-12" id="barChartTitles"></div>
+            <div class="col-md-12" id="indSelectConteiner" style="display:none">
+                <select id="indSelect"></select>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1" id="barChart"></div>
+        </div>
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1">
+                <div id="footnoteConteiner">
+                    <p  style="font-size: 0.9em;text-align:left" id="footerNoteDataNA"></p>
+					<p  style="font-size: 0.9em;text-align:left" id="footerNote1"></p>
+                    <p  style="font-size: 0.9em;text-align:left" id="footerNote2"></p>
+                    <a href="http://ec.europa.eu/eurostat/ramon/nomenclatures/index.cfm?TargetUrl=LST_NOM_DTL&StrNom=CL_ISCED11&StrLanguageCode=EN&IntPcKey=37389717&StrLayoutCode=HIERARCHIC" id="nomenclatureLink" target="_blank">
+                        <p style="font-size: 0.9em;text-align:left" id="nomenclatureText"></p>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1 text-center">
+                <div class="row text-center">
+                    <div id='legend-container'></div>
+                </div>
+            </div>
+        </div>
+        <div class="row text-center" id="linkDataset" style="margin-top: 15px;">
+			<div class="col mx-auto">
+			  <div id="bookmark-link" ><a target="_blank" style="font-size:16px;color:#007bff" href="#" class="infolink"></a></div>
+			</div>
+	    </div> 
+
+    </div>
+
+    <div id="dashboard" style="display:block;">
+        <div id="images">
+        </div>
+
+    </div>
+    <div id="container-modal-instructions" class="modal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div id="instructions-header" class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div id="instructions" class="modal-body">
+                </div>
+                <div class="modal-footer">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="container-modal-dataset" class="modal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div id="dataset-header" class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div id="dataset" class="modal-body">
+                </div>
+                <div class="modal-footer">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="container-modal-embed" class="modal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div id="embed-header" class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div id="embed" class="modal-body">
+                </div>
+                <div class="modal-footer">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/l10n.js/l10n.js"></script>
+    <script src="js/lang.js"></script>
+    <script src="l10n/localisations.js"></script>
+    <script src="js/libs/jquery-3.1.1.min.js"></script>
+    <script src="js/libs/bootstrap.js" type="text/javascript"></script>
+    <script src="js/libs/bootstrap-select.js" type="text/javascript"></script>
+    <script src="js/libs/json-stat.js"></script>
+    <script src="js/libs/d3.v3.min.js" type="text/javascript"></script>
+    <script src="js/libs/d3.tip.v0.6.3.js"></script>
+    <script src="js/utils.js" type="text/javascript"></script>
+    <script src="js/constants.js" type="text/javascript"></script>
+    <script src="js/indicators.js" type="text/javascript"></script>
+    <script src="js/main.js" type="text/javascript"></script>
+    <script src="js/piechart.js"></script>
+    <script src="js/sortboxes.js"></script>
+    <script src="js/histogram.js"></script>
+    <script src="js/legend.js"></script>
+    <script src="js/social.js" type="text/javascript"></script>
+
+</body>
+
+</html>

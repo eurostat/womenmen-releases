@@ -1,0 +1,219 @@
+<!--[if IE]><!DOCTYPE html><!--><!--
+  /******************************************************************/
+  /* "selfperceived" - v"1.0.1"    */
+  /* http://ec.europa.eu/eurostat https://ec.europa.eu/eurostat     */
+  /* Author: Sven Kuncikowski <sven.kuncikowski@sword-group.com>    */
+  /* "Licensed European Union Public Licence (EUPL v.1.1)"          */
+  /******************************************************************/
+  <![endif]--><!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Eurostat Digital Publication - Self-perceived health</title>
+    <meta name="description" content="" />
+    <meta property="og:type" content="article" />
+    <meta
+      property="og:title"
+      content="Eurostat: Self-perceived health in the EU"
+    />
+    <meta
+      property="og:image"
+      content="https://ec.europa.eu/eurostat/cache/infographs/womenmen/images/bloc-1/bloc1c-selfperceived_en.png"
+    />
+  <link href="styles/npm.bootstrap.17f57ae61aa33d2978d9.css" rel="stylesheet"><link href="styles/npm.billboard.js.613e92bc80f7d9457195.css" rel="stylesheet"><link href="styles/npm.open-sans-all.78b4c79a978b5305bda0.css" rel="stylesheet"><link href="styles/main.33f649497f37bf443afb.css" rel="stylesheet"></head>
+
+  <body>
+    <div id="loader" class="container" style="background-color: #ffffff;">
+      <div class="row justify-content-center align-items-center">
+        <i class="fa fa-spin fa-spinner fa-3x fa-fw"></i>
+      </div>
+    </div>
+
+    <div id="global" style="display: none;" class="container-fluid">
+      <div class="row">
+        <div class="col">
+          <h3>
+            <strong id="title">title</strong>
+          </h3>
+        </div>
+        <div class="col-3">
+          <div class="d-flex justify-content-end">
+            <div id="logo" class="logo"></div>
+          </div>
+        </div>
+      </div>
+      <div class="row" style="padding-bottom: 5px;">
+        <div class="col">
+          <div class="d-flex justify-content-start">
+            <span id="subtitle" class="subtitle">subtitle</span>
+          </div>
+        </div>
+      </div>
+      <div class="row justify-content-around">
+        <!-- <div id="button-flex" class="col col-md-6 offset-md-3"> -->
+        <div id="button-flex" class="col">
+          <div class="d-flex flex-wrap justify-content-around">
+            <div>
+              <button id="button-0" class="btn btn-light btn-lg active">
+                <span id="vis-one-text">vis-one</span>
+              </button>
+            </div>
+            <div>
+              <!-- <div class="w-100"></div>  -->
+              <button id="button-1" class="btn btn-light btn-lg">
+                <span id="vis-two-text">vis-two</span>
+              </button>
+            </div>
+            <div>
+              <!-- <div class="w-100"></div> -->
+              <button id="button-2" class="btn btn-light btn-lg">
+                <span id="vis-three-text">vis-three</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+
+
+      </div>
+
+      <!-- <div class="row justify-content-around">
+            <div id="button-flex" class="col col-md-6 offset-md-3">
+                <div class="d-flex justify-content-around">
+                    <button id='button-0' class="btn btn-light btn-lg active"><span id='vis-one-text'>vis-one</span></button>
+                    <div class="w-100"></div>
+                    <button id='button-1' class="btn btn-light btn-lg"><span id='vis-two-text'>vis-two</span></button>
+                    <div class="w-100"></div>
+                    <button id='button-2' class="btn btn-light btn-lg"><span id='vis-three-text'>vis-three</span></button>
+                </div>
+             </div>
+        </div> -->
+
+      <div class="row">
+        <div id="graph-container" class="col">
+          <div id="barchart"></div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col footnote-container">
+          <div id="footnote" class="footnotes">footnote</div>
+        </div>
+      </div>
+      <div class="row">
+        <div id="button-col" class="col">
+          <div id="axis-flex" class="d-flex justify-content-start">
+            <button id="btn-axis" class="btn btn-light btn-sm">scale</button>
+          </div>
+        </div>
+        <div id="legend-col" class="col-5 col-auto">
+          <div id="legend-flex" class="d-flex justify-content-center">
+            <div id="legend-container" class="legendcontainer"></div>
+          </div>
+        </div>
+        <div id="social-col" class="col col-3">
+          <div id="social-flex" class="d-flex justify-content-end">
+            <div id="social-container" class="socialmedia"></div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+          <div id="bookmark-flex" class="d-flex justify-content-center mx-auto">
+            <div id="bookmark-container" class="legendcontainer"></div>
+              <div id="bookmark-link" class="legendcontainer"></div>
+          </div>
+      </div>
+    </div>
+    <div
+      id="container-modal-instructions"
+      class="modal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="mySmallModalLabel"
+    >
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div id="instructions-header" class="modal-header">
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div id="instructions" class="modal-body"></div>
+          <div class="modal-footer"></div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      id="container-modal-embed"
+      class="modal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="mySmallModalLabel"
+    >
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div id="embed-header" class="modal-header">
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div id="embed" class="modal-body"></div>
+          <div class="modal-footer"></div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      id="container-modal-dataset"
+      class="modal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="mySmallModalLabel"
+    >
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div id="dataset-header" class="modal-header">
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div id="dataset" class="modal-body"></div>
+          <div class="modal-footer"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- needed for localisation, otherwise it is not available -->
+    <script
+      type="text/javascript"
+      src="./l10n/localisations.js"
+      charset="utf-8"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./config/configuration.js"
+      charset="utf-8"
+    ></script>
+  <script type="text/javascript" src="scripts/runtime.757a3358204416b5a985.js"></script><script type="text/javascript" src="scripts/npm.d3-shape-ffcac2c1df0ba2538652.js"></script><script type="text/javascript" src="scripts/npm.d3-selection-f4c940ee1d5ac24e6f60.js"></script><script type="text/javascript" src="scripts/npm.d3-array-3fe3a25849b5a96f00fe.js"></script><script type="text/javascript" src="scripts/npm.d3-transition-db69ff3c1b128cba26e9.js"></script><script type="text/javascript" src="scripts/npm.d3-interpolate-077bcba236a11c34d33b.js"></script><script type="text/javascript" src="scripts/npm.d3-scale-67d44733d31234a36207.js"></script><script type="text/javascript" src="scripts/npm.d3-time-b436386d80374e7b3bf4.js"></script><script type="text/javascript" src="scripts/npm.d3-format-8ee5efb7413ef68dbc75.js"></script><script type="text/javascript" src="scripts/npm.fortawesome-544a8a24a58167eb0c0f.js"></script><script type="text/javascript" src="scripts/npm.d3-ease-e09d1c28534efc89f1fe.js"></script><script type="text/javascript" src="scripts/npm.bootstrap-684b5a6c0257ee0557d3.js"></script><script type="text/javascript" src="scripts/npm.d3-collection-b27380263e7fb55211ef.js"></script><script type="text/javascript" src="scripts/npm.d3-color-8e9243fdcc8ca4243f9d.js"></script><script type="text/javascript" src="scripts/npm.d3-drag-d75af4285867d3b99864.js"></script><script type="text/javascript" src="scripts/npm.d3-zoom-e0a744202dc0ec93453a.js"></script><script type="text/javascript" src="scripts/npm.d3-brush-cf137540016874d57183.js"></script><script type="text/javascript" src="scripts/npm.d3-dsv-be4668cb71bd6a0a4f70.js"></script><script type="text/javascript" src="scripts/npm.d3-time-format-8a01fcc6b72d6f927589.js"></script><script type="text/javascript" src="scripts/npm.d3-axis-894456ea5b64ddfb4fe1.js"></script><script type="text/javascript" src="scripts/npm.billboard.js-2778c388d0d5f917afbb.js"></script><script type="text/javascript" src="scripts/npm.d3-timer-519cef08bfcf74e88f40.js"></script><script type="text/javascript" src="scripts/npm.open-sans-all-bd917e0f05f00625c8bf.js"></script><script type="text/javascript" src="scripts/npm.d3-dispatch-c9cf954799502f7f0f7f.js"></script><script type="text/javascript" src="scripts/npm.d3-path-3c16fe42c0e3de64dfbe.js"></script><script type="text/javascript" src="scripts/npm.element-remove-3ca47360ea5055b59304.js"></script><script type="text/javascript" src="scripts/npm.jquery-764c249cf76b0080637b.js"></script><script type="text/javascript" src="scripts/npm.jsonstat-5b89314ac54bfa4118d9.js"></script><script type="text/javascript" src="scripts/npm.l10n.js-c635f82c8f85a7843d68.js"></script><script type="text/javascript" src="scripts/npm.popper.js-b3698077019e5e77b52b.js"></script><script type="text/javascript" src="scripts/npm.process-3542b4847d51772b833c.js"></script><script type="text/javascript" src="scripts/npm.setimmediate-fa025b59dfa024ca0268.js"></script><script type="text/javascript" src="scripts/npm.timers-browserify-cbe59e905056e268d8ef.js"></script><script type="text/javascript" src="scripts/npm.webpack-a902e1ca2b9a3305475a.js"></script><script type="text/javascript" src="scripts/main-048ed20d5a79697dd4d0.js"></script></body>
+</html>
+

@@ -1,0 +1,97 @@
+{
+	"imgYourLogo": "<img id=\"yourlogo\" src=\"img/austria-logo.png\" />",
+	"imgYourLogo": "",
+
+	"instructions0": "Select a country in the bar chart to get the education levels displayed.",
+	"instructions1": "Select the education level either in the pie chart or by clicking on the title and the comparison between the EU, the Member States and the EFTA countries will appear in the bar chart.",
+	"instructions2": "In the bar chart: in order to select data for only women or only men, uncheck/check in the legend below. In order to compare the result between women and men, rank by clicking on the arrow (<span id=\"nogif\" style=\"top: 2px;display: inline-block;position: relative;font-size:18px\" class=\"fa fa-caret-down fa-2x useable\" ></span>) in the legend at the bottom.",
+	"dataError": "Ooooppps something went wrong !",
+
+	"clickToSelect": "Click to select",
+    "instructions-header": "Instructions",
+    "dataset-header": "Click on link to get to dataset",
+    "dataset-icon": "Get link to dataset",
+    "embed-icon": "Embed",
+	"embed_instruction": "Copy this code and paste it in your Website.",
+    "twitter-icon": "Twitter",
+    "facebook-icon": "Facebook",
+    "embed": "Embed this chart",
+	"modalClose": "Close",
+
+	"footerSource" : "Source : Eurostat – ",
+	"footerLinkToDataset" : "access to dataset",
+	"nomenclatureText" : "Data based on the ISCED 2011 classification",
+	
+	"decimal_separator": ".",    
+
+	"EU27_2020": "European Union",
+	"AT": "Austria",
+	"BE": "Belgium",
+	"BG": "Bulgaria",
+	"CY": "Cyprus",
+	"CZ": "Czechia",
+	"DE": "Germany",
+	"DK": "Denmark",
+	"EE": "Estonia",
+	"EL": "Greece",
+	"ES": "Spain",
+	"FI": "Finland",
+	"FR": "France",
+	"HR": "Croatia",
+	"HU": "Hungary",
+	"IE": "Ireland",
+	"IT": "Italy",
+	"LT": "Lithuania",
+	"LU": "Luxembourg",
+	"LV": "Latvia",
+	"LI": "Liechtenstein",
+	"MT": "Malta",
+	"NL": "Netherlands",
+	"PL": "Poland",
+	"PT": "Portugal",
+	"RO": "Romania",
+	"SE": "Sweden",
+	"SI": "Slovenia",
+	"SK": "Slovakia",
+	"UK": "United Kingdom",
+	"CH": "Switzerland",
+	"IS": "Iceland",
+	"NO": "Norway",
+
+	"----WM----": " Women & Men Publication ",
+
+	"womenmen.valueHighShort" : "Primary and lower secondary education *",                                  
+	"womenmen.valueMediumShort" : "Upper secondary education **",                                
+	"womenmen.valueLowShort" : "Tertiary education",  
+	
+	"womenmen.valueHighLong" : "Primary and lower secondary education",                                  
+	"womenmen.valueMediumLong" : "Upper secondary and post-secondary non-tertiary education",                                
+	"womenmen.valueLowLong" : "Tertiary education",
+
+	"womenmen.secondTitleLegend": "% of population aged 25 to 64",
+	"womenmen.document.title": "Education levels",
+	"womenmen.title": "Education levels, 2020",
+	"womenmen.footerNoteDataNA":"(*) Data not available.",
+	"womenmen.footerNote1": "* Primary and lower secondary education also includes less than primary (no education).",
+	"womenmen.footerNote2" : "** Upper secondary education also includes post-secondary non-tertiary education.",
+	"womenmen.footerNote3" : "Data based on the ISCED 2011 classification",
+
+	"womenmen.hide_F": "Hide Women",
+	"womenmen.hide_M": "Hide Men",
+	"womenmen.show_F": "Show Women",
+	"womenmen.show_M": "Show Men",
+	"womenmen.sort_F" : "Sort women descending",
+	"womenmen.sort_M" : "Sort men descending",
+	"womenmen.F": "Women",
+	"womenmen.M": "Men",
+
+	"womenmen.title.men" : "Men",
+	"womenmen.title.women" : "Women",
+
+	"womenmen.tooltip.unit": "%",
+
+	"womenmen.sharing.twitter" : "Education levels"
+
+
+
+}
