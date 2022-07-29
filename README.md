@@ -9,29 +9,41 @@ Previous editions which were actually translated can be found here:
 
 
 ## Development
-The file structure of publication:
-When you open the folder in which you've unzipped the file you should see the following structure: 
+
+## Downloading / Retrieval
+The current release (2021) would be available under the folder **releases/v2021**
+
+In order to download the current release, you would need to 
+
+## File and folder structure
+
+When you open the folder in which you've downloaded (cloned) the current release folder you should see the following structure: 
 
 Folder structure overview
 ```
-- v0.9x
-|-- womenmen
-|   |-- l10n
-|   |   |--  en.json
-|   |   |--  de.json
-|   |   |--  fr.json
-|   |   |--  localisations.js
-...
-|-- |-- vis
-|   |   |-- 00_00_00
-|   |   |-- 00_01_01
-|   |   |-- 01_02_02
-|   |   |-- |-- l10n
-|   |   |-- |-- |-- en.json
-|   |   |-- |-- |-- de.json
-|   |   |-- |-- |-- fr.json
-|   |   |-- |-- |-- localisations.js
-|   |   |-- fonts
+- v2021
+|-- assets
+|-- css
+|-- images
+|-- img
+|-- js
+|-- l10n
+|   |--  en.json
+|   |--  de.json
+|   |--  fr.json
+|   |--  localisations.js
+|-- sass
+|-- vis
+|   |-- 00_00_00
+|   |-- 00_01_01
+|   |-- 01_02_02
+|   |-- |-- l10n
+|   |-- |-- |-- en.json
+|   |-- |-- |-- de.json
+|   |-- |-- |-- fr.json
+|   |-- |-- |-- localisations.js
+|   |-- fonts
+files
 ...
 ```
 The main navigation part is located under **womenmen**, which is also the home for the publication itself!
