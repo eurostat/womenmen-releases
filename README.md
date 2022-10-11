@@ -48,7 +48,7 @@ files
 ```
 The main navigation part is located under **womenmen**, which is also the home for the publication itself!
 
-The __vis__ folder contains all the visualisation tools, currently those are:
+The __vis__ and __svg__ folder contains all the visualisation tools, currently those are:
 ```
 00_00_00: Quiz
 01_01_01: Lifeline 
@@ -87,7 +87,7 @@ umemployment: Umemployment
 In order to build a fully translated version, you would have to first download one release bundle. This will be available via the folder **releases**.
 
 ### How to find the localisation folder
-The following steps have to be done for all visualisations contained in the "vis" folder and for the main navigation part in <womenmen>. 
+The following steps have to be done for all visualisations contained in the **"vis"** folder, the **"svg"** folder and for the main navigation part in <womenmen> top level. 
 
 To start with the translation process, we recommend to first translate the publication itself (folder ./l10n/). All visualisations and the publication itself, have their own folder "l10n" which contains the files, that we have to work with.
 
