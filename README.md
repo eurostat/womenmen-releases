@@ -86,14 +86,12 @@ umemployment: Umemployment
 
 In order to build a fully translated version, you would have to first download one release bundle. This will be available via the folder **releases**.
 
-How to find the localisation folder
+### How to find the localisation folder
 The following steps have to be done for all visualisations contained in the "vis" folder and for the main navigation part in <womenmen>. 
 
-To start with the translation process, we recommend to first translate the publication itself. All visualisations and the publication itself, have their own folder "l10n" which contains the files, that we have to work with.
+To start with the translation process, we recommend to first translate the publication itself (folder ./l10n/). All visualisations and the publication itself, have their own folder "l10n" which contains the files, that we have to work with.
 
 Start with locating the "l10n" folder inside <womenmen> and then follow the described steps below. 
-
-
 
 Folder structure for **womenmen**
 ```
@@ -110,7 +108,7 @@ Folder structure for **womenmen**
 ...
 ``` 
 
-After that, repeat for all visualisations located in the **womenmen/vis/** folder, see "Folder structure for lifeline" below for an example of the Lifeline visualisation (it will be the same for all visualisations):
+After that, repeat for all visualisations located in the **womenmen/vis/** folder and located under **womenmen/svg/**, see "Folder structure for lifeline" below for an example of the Lifeline visualisation (it will be the same for all visualisations):
 ```
 Folder structure for lifeline
 - v0.9x
@@ -125,6 +123,9 @@ Folder structure for lifeline
             |-- css
             |-- js
             index.html
+    |-- svg
+        |--dailyChildCare
+        |...
 ...
 ```
 
