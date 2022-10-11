@@ -386,6 +386,50 @@ window.defaultLanguage = 'es';
 ```
 Now you can open up the publication in a Browser and it should be using your newly added Spanish language by default.
 
+### Static infographs - Change size
+It can occur that your text doesn’t fit the designated area (picture 1)
+
+In this case, you have the possibility to overide the default font size (picture 2).
+
+In the svg folder structure :
+
+Folder structure
+```
+|-- womenenmen
+    |-- svg
+        |-- dayliChildCare (or other one)
+            |-- js   
+                |-- constants.js
+                ...
+            ...
+         ...
+    ...
+...
+```
+  
+Open the constant.js in a text editor.
+
+To locate the text you want to change, it is the item where the text (or texts ) key will contein the text key in the json file. 
+
+For example, this configuration node who is handeling the "subtitle1" text :
+
+```js
+{
+  type:"single",
+  yPosition:93,
+  xPosition:33,
+  align:"left",
+  class:"st9 st17 st19",
+  text:"subtitle1",
+  overridFontSize:"20px"  ==> Uncomment this line (remove « // » ) and set the desirated size
+ },
+
+is relative to the text from the json file « your_langage.json »
+
+"subtitle1"     : "How are women and men involved?",
+
+To preview the change, refresh the page and test it.
+
 ## Generating a full new quiz
 
 On this page, we explain step by step how you can create custom questions and answers in the Women & Men Quiz.
