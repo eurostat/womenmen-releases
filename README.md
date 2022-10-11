@@ -294,7 +294,7 @@ Once the default language has been changed, double click the "index.html" file a
 
 You can also force any configured language to be shown by adding a parameter to the URL. But this will only work if the files are served by a web server and not if you open the index.html directly with a browser from your desktop.
 
-### Specialty for quiz
+### Translation specialty for quiz
 
 The quiz has some structural differences compared to the visualisations. It has a dot-separated structure for the keys.
 
@@ -310,6 +310,81 @@ Example:
 ```
 
 In order to translate a question, you would have to translate the question and each choice. The choices are in the specified order. Please keep the order!
+
+## Images containing text
+Creating **"translated images"**
+The various visualisation tools are accessed by clicking on an image in the publication.
+The majority of these images contain text in English.
+
+If you prefer to have the images with the text in the translated language, you will have to make screenshots of the translated visualisations.
+
+You can use "Snipping tool" on Windows or any other tool you're familiar with to make the screenshot and save the result in .png format.
+Regarding the size of the picture, the main parameter to take in account is the width.
+Except for bloc-1a and bloc-2c, the width has been fixed to 1200 px in order to suit most screen sizes. The height of the image is given as reference only, but please try to match it.
+
+To optimise download time of the images, we recommend a 72dpi resolution for the images as a higher resolution will also increase the file size.
+
+The **"translated images"** will have to be stored in the location mentioned in the table below.
+Make sure to use the correct language code in the file name when saving the images:
+
+As an example, if the file name in English is bloc1a-lifeLine_en.png the file name of the Croatian version of the image has to be bloc1a-lifeLine_hr.png
+
+
+The table below lists the images containing English text.
+The icons and pictures without texts are not listed as they don't have to be re-done.
+
+<womenmen> references the top directory of the publication
+
+ Note: the texts contained in bloc-3.1 infographics are superposed on the image and are taken from the translation files, therefore they are not listed.
+
+
+| Page url | Location and filename of the images | Size (px) |
+| -------------|-----------------------------|--------|
+| bloc-1a.html | <womenmen>/images/bloc-1/bloc1a-lifeLine_en.png            | 1400 x 596  |
+| bloc-1b.html | <womenmen>/images/bloc-1/bloc1b-womenPer100Men_en.png      | 1200 x 726  |
+| bloc-1b.html | <womenmen>/images/bloc-1/bloc1b-householTypes_en.png       | 1200 x 686  |
+| bloc-1c.html | <womenmen>/images/bloc-1/bloc1c-causesOfDeath_en.png       | 1200 x 494  |
+| bloc-1d.html | <womenmen>/images/bloc-1/bloc1d-overallSatisfaction_en.png | 1200 x 741  |
+| bloc-2a.html | <womenmen>/images/bloc-2/bloc2a-educationLevels_en.png     | 1200 x 723  |
+| bloc-2b.html | <womenmen>/images/bloc-2/bloc2b-employmentRates_en.png     | 1200 x 688  |
+| bloc-2b.html | <womenmen>/images/bloc-2/bloc2b-partTimeWorkers_en.png     | 1200 x 648  |
+| bloc-2b.html | <womenmen>/images/bloc-2/bloc2b-unemploymentRate_en.png    | 1200 x 659  |
+| bloc-2c.html | <womenmen>/images/bloc-2/bloc2c-manager_en.jpg             | 1000 x 1582 |
+| bloc-2d.html | <womenmen>/images/bloc-2/bloc2d-genderPayGap_en.png        | 1200 x 650  |
+| bloc-2d.html | <womenmen>/images/bloc-2/bloc2d-meanHourlyWages_en.png     | 1200 x 982  |
+| bloc-3b.html | <womenmen>/images/bloc-3/bloc3b-culturalHabits_en.png      | 1200 x 671  |
+| bloc-3c.html | <womenmen>/images/bloc-3/bloc3c-internetActivities_en.png  | 1200 x 611  |
+| bloc-3c.html | <womenmen>/images/bloc-3/bloc3c-onlineShopping_en.png      | 1200 x 638  |
+| bloc-3d.html | <womenmen>/images/bloc-3/bloc3d-dailyChildcare_en.jpg      | 1200 x 903  |
+| bloc-3d.html | <womenmen>/images/bloc-3/bloc3d-dailyCooking_en.jpg        | 1200 x 903  |
+
+
+## Adding logo or name of NSI
+
+Each page of the publication has a placeholder to either add the logo or the name of your NSI. The height of the logo image is fixed to 60 pixels.
+
+To add the logo in the Spanish version:
+
+copy the logo image in the directory <womenmen>/images/icones
+edit the file <womenmen>/l10n/es.json
+change the parameter: "imgYourLogo": "<img id=\"yourlogo\" src=\"images/icones/yourLogo.png\" />" and replace yourLogo.png with the file name of the NSI logo image
+To add the name of NSI in Spanish version
+
+edit the file <womenmen>/l10n/es.json
+change the parameter: "imgYourLogo": "<img id=\"yourlogo\" src=\"images/icones/yourLogo.png\" />" and replace it with the name of the NSI:  "imgYourLogo": "Instituto Nacional de Estadistica"
+
+## Changing default language 
+Step-by-step guide to change the standard language to be displayed
+If you plan to change the standard language from "en" to the language we just have added, follow those steps:
+
+Once again, we have to open the "localisation.js" file contained in the l10n folder.
+Change in Line 1 'en' to 'es'. The result should like this:
+
+### Spanish as default language
+```js
+window.defaultLanguage = 'es';
+```
+Now you can open up the publication in a Browser and it should be using your newly added Spanish language by default.
 
 ## Generating a full new quiz
 
