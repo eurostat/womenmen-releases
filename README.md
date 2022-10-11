@@ -421,7 +421,7 @@ For example, this configuration node who is handeling the "subtitle1" text :
   align:"left",
   class:"st9 st17 st19",
   text:"subtitle1",
-  overridFontSize:"20px"  ==> Uncomment this line (remove « // » ) and set the desirated size
+  overridFontSize:"20px"  ==> Uncomment this line (remove "//" ) and set the desirated size
  },
 
 is relative to the text from the json file « your_langage.json »
