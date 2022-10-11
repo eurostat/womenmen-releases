@@ -130,7 +130,7 @@ Folder structure for lifeline
 
 The most important folder for the translation would be the **l10n** folder
 
-Step-by-step guide to add a language
+### Step-by-step guide to add a language
 For demonstration purpose, we will do it for the Lifeline visualisation, which can be found shown in "Folder structure for lifeline" above:
 
 Open the file: "localisation.js" in the corresponding "l10n" of lifeline visualisation. All work which we will be doing now, is in this folder "l10n"!
