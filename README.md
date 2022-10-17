@@ -423,7 +423,8 @@ For example, this configuration node who is handeling the "subtitle1" text :
   text:"subtitle1",
   overridFontSize:"20px"  ==> Uncomment this line (remove "//" ) and set the desirated size
  },
-
+```
+    
 is relative to the text from the json file « your_langage.json »
 
 "subtitle1"     : "How are women and men involved?",
