@@ -386,7 +386,7 @@ window.defaultLanguage = 'es';
 ```
 Now you can open up the publication in a Browser and it should be using your newly added Spanish language by default.
 
-### Static infographs - Change size
+## Static infographs - Change size
 It can occur that your text doesn’t fit the designated area (picture 1)
 
 In this case, you have the possibility to overide the default font size (picture 2).
